@@ -5,7 +5,7 @@ w trakcie tego procesu dane, zgodnie z jego konfiguracją.
 # Konfigurowanie czasu odświeżania
 Domyślnie pulpit jest odświeżany co 5 minut.
 
-Czas odświeżania może być zdefiniowany w ustawieniach [aplikacji](/pl/app/applications.md) o nazwie "system". Przykład konfiguracji:
+Czas odświeżania może być zdefiniowany w ustawieniach [aplikacji](/pl/app/applications/intro.md) o nazwie "system". Przykład konfiguracji:
 
 ```
 {
