@@ -1,5 +1,7 @@
 # Signomix documentation
 
+Dokumentacja serwisu platformy IoT Signomix dotyczy nowej wersji 2.0, będącej w trakcie przygotowywania.
+
 ## Spis treści
 
 - [Ogólny opis serwisu](introduction.md)
@@ -10,5 +12,6 @@
 
 ## Uwagi
  1. Dokumentacja serwisu Signomix jest dostępna w języku polskim. Inne wersje językowe (m. inn. angielska) mogą pojawić się w późniejszym terminie o ile znajdą się na to środki. Obecnie serwisy tłumaczące teksty są łatwo dostępne (również jako funkcja przeglądarki) więc mam nadzieję, że to nie będzie dużym problemem.
- 2. Źródła dokumentacji są dostępne w [repozytorium GitHub](https://github.com/signomix/signomix-documentation).
+ 2. 
+ 3. Źródła dokumentacji są dostępne w [repozytorium GitHub](https://github.com/signomix/signomix-documentation).
 
