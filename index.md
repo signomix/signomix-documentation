@@ -1,6 +1,6 @@
 # Signomix documentation
 
-<div class="d-flex align-items-center"><img src="logo.svg" width="100px"></div>
+<div class="text-center"><img src="logo.svg" width="100px"></div>
 
 Dokumentacja serwisu platformy IoT Signomix dotyczy nowej wersji 2.0, będącej w trakcie przygotowywania.
 
