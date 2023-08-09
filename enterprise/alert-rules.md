@@ -1,0 +1,3 @@
+# Reguły alertów
+
+DO OPISANIA
