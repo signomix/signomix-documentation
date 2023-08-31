@@ -1,4 +1,4 @@
-# Warunki korzystania z usługi
+# Regulamin i Polityka Prywatności
 
 ## & 1. Postanowienia ogólne
 
