@@ -6,4 +6,4 @@ Obszary funkcjonalne:
 - [Zarządzenie urządzeniami IoT](/app/devices/index.md)
 - [Pulpity](/app/dashboards/index.md)
 - [Powiadomienia](/app/notifications/index.md)
-- [Konto użytkownika](/app/account/index.md)
+- [Konto użytkownika](/app/account/settings.md)

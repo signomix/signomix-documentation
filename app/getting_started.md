@@ -14,7 +14,7 @@ Korzystanie z Signomiksa wymaga zarejestrowania konta użytkownika. Obecnie jest
 
 ## Instalowanie aplikacji (opcjonalne)
 
-Signomix jest aplikacją PWA co oznacza, że może być instalowana na komputerze (tablecie lub smartfonie) i uruchamianna podobnie jak aplikacja desktopowa. Pomimo, że taka instalacja nie jest konieczna i Signomiksa możesz używać za pomocą przeglądarki internetowej, to jednak zalecam wykonanie takiej instalacji z uwagi na [liczne korzyści](pwa-intro.md) jakie to przynosi. 
+Signomix jest aplikacją PWA co oznacza, że może być instalowana na komputerze (tablecie lub smartfonie) i uruchamianna podobnie jak aplikacja desktopowa. Pomimo, że taka instalacja nie jest konieczna i Signomiksa możesz używać za pomocą przeglądarki internetowej, to jednak zalecam wykonanie takiej instalacji z uwagi na [liczne korzyści](/development/pwa-intro.md) jakie to przynosi. 
 
 W zależności od rodzaju przeglądarki w jakiej uruchamiasz https://app.signomix.com procedura wygląda trochę inaczej.
 
