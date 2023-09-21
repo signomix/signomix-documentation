@@ -7,3 +7,7 @@ Obszary funkcjonalne:
 - [Pulpity](/app/dashboards/index.md)
 - [Powiadomienia](/app/notifications/index.md)
 - [Konto użytkownika](/app/account/settings.md)
+
+Poradniki:
+- [Własne kolory ikon na kontrolkach pulpitu](/app/howto/icon_colors.md)
+- [Definiowanie kolorów wykresów](/app/howto/chart_colors.md)
