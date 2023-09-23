@@ -11,12 +11,12 @@ Zmiana powyższego zestawu kolorów jest możliwa poprzez zmianę konfiguracji k
 
 ```json
 {
-    colors: [
-        'text-success',
-        'text-warning',
-        'text-danger',
-        'text-muted',
-        'text-muted'
-    ]
+    "colors": [
+		"text-success",
+		"text-warning",
+		"text-danger",
+		"text-muted",
+		"text-muted"
+	]
 }
 ```

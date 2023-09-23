@@ -11,3 +11,4 @@ Obszary funkcjonalne:
 Poradniki:
 - [Własne kolory ikon na kontrolkach pulpitu](/app/howto/icon_colors.md)
 - [Definiowanie kolorów wykresów](/app/howto/chart_colors.md)
+- [Zmiana czasu odświeżania pulpitów](/app/howto/refresh_interval.md)
