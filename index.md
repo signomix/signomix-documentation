@@ -4,9 +4,9 @@ Dokumentacja serwisu platformy IoT Signomix dotyczy nowej wersji 2.0, będącej 
 
 ## Spis treści
 
-- [Ogólny opis serwisu](introduction.md)
-- [Jak zacząć](/app/getting_started.md)
-- [Funkcje aplikacji webowej](/app/index.md)
+- [Ogólny opis serwisu](/introduction.md)
+- [Jak zacząć](/getting_started.md)
+- [Funkcjonalności](/app/index.md)
 - [Wersja dla organizacji](/administration/index.md)
 - [Informacje dla programistów](/development/index.md)
 - [Rest API](/api/index.md)

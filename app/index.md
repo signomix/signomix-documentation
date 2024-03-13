@@ -2,14 +2,22 @@
 
 Webaplikacja Signomix jest dostępna pod adresem https://cloud.signomix.com
 
-Obszary funkcjonalne:
-- [Urządzenia](/app/devices/index.md)
-- [Grupy urządzeń](/app/groups/index.md)
+- Rejestracja konta i logowanie
+- Strona startowa
+
+Menu aplikacji:
 - [Pulpity](/app/dashboards/index.md)
-- [Reguły](/app/rules/index.md)
-- [Alerts](/app/alerts/index.md)
+- Struktura
+  - [Urządzenia](/app/devices/index.md)
+  - [Grupy urządzeń](/app/groups/index.md)
+- Analityka
+  - [Reguły](/app/rules/index.md)
+  - [Alerts](/app/alerts/index.md)
 - [Wiadomości](/app/messages/index.md)
-- [Konto użytkownika](/app/account/index.md)
+- [Ustawienia](/app/account/index.md)
+
+Dodatkowe informacje:
+- [Limity](/app/limits.md)
 
 Poradniki:
 - [Własne kolory ikon na kontrolkach pulpitu](/app/howto/icon_colors.md)
