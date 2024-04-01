@@ -6,6 +6,7 @@
 - [Ogólny opis serwisu](/introduction.md)
 - [Jak zacząć](/getting_started.md)
 - [Funkcjonalności](/features/index.md)
+- [Poradniki](/howto/index.md)
 - [Wersja dla organizacji](/administration/index.md)
 - [Informacje dla programistów](/development/index.md)
 - [Rest API](/api/index.md)

@@ -10,13 +10,10 @@
 - [Alerts](/features/alerts/index.md)
 - [Wiadomości](/features/messages/index.md)
 - [Konto użytkownika](/features/account/index.md)
+- [Rejestrowanie danych](/features/data_provisioning.md)
+- [Pobieranie danych](/features/downloading_data.md)
 - Zarządzanie kontem organizacji (organiazcje)
 - Zarządzanie klientami organizacji (organiazcje)
 - Raporty (organizacje)
 - Zarządzanie użytkownikami (admin)
 - Wysyłanie wiadomości do użytkowników (admin)
-
-Poradniki:
-- [Własne kolory ikon na kontrolkach pulpitu](/howto/icon_colors.md)
-- [Definiowanie kolorów wykresów](/howto/chart_colors.md)
-- [Zmiana czasu odświeżania pulpitów](/howto/refresh_interval.md)
