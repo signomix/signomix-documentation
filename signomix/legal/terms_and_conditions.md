@@ -49,7 +49,7 @@ Niniejsza polityka prywatności opisuje, jakie informacje gromadzone są w ramac
 4. Dane powiązane z kontami darmowym są przechowywane w trakcie świadczenia Usługi, czyli od momentu zarejestrowania konta użytkownika, do momentu zlikwidowania konta i rezygnacji z Usługi.
 5. Dane zawarte na fakturach są przechowywane przez okres określony odrębnymi przepisami prawa.
 6. Administratorem danych osobowych jest: EXPERIOT Grzegorz Skorupa, ul. Obywatelska 106A/34, 94-104 Łódź.
-7. Przetwarzanie danych powierzono: AlphaNet sp. z o.o. – podmiot odpowiedzialny za przechowywanie danych w infrastrukturze chmury obliczeniowej Aruba Cloud.
+7. Przetwarzanie danych powierzono: OVH Sp. z o.o. – podmiot odpowiedzialny za przechowywanie danych w infrastrukturze OVHcloud, https://ovh.com.
 8. Prawa Użytkowników w związku z przetwarzaniem danych osobowych:
   - prawo do sprostowania danych,
   - prawo do całkowitego lub częściowego usunięcia danych,
