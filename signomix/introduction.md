@@ -2,7 +2,7 @@
 
 Signomix to platforma zarządzania urządzeniami IoT i danymi dostępna w chmurze. Pozwala użytkownikom i firmom na efektywne zarządzanie urządzeniami, danymi, użytkownikami oraz integracją.
 
-Główne funckcjonalności platformy to:
+Główne funkcjonalności platformy to:
 - zarządzanie urządzeniami,
 - wizualizacja danych,
 - łatwość budowania rozwiązań obejmujących analizę i reagowanie na dane,

@@ -18,7 +18,7 @@ Powiadomienia wysyłane przez Signomix dzielą się na 4 typy, których nazwy s
 - ostrzegawcze - ostrzeżenia
 - alarmy o wystąpieniu problemów o charakterze krytycznym
 
-Dla każdego z powyższych typów powiadomień można skonfigurować kanał komunikacji, którym Signomiks prześle powiadomienie do użytkownika. W każdym przypadku powiadomienia będą dostępne do przeglądania w aplikacji webowej (opcja menu `Powiadomienia`). Użytkownik może wybrać:
+Dla każdego z powyższych typów powiadomień można skonfigurować kanał komunikacji, którym Signomix prześle powiadomienie do użytkownika. W każdym przypadku powiadomienia będą dostępne do przeglądania w aplikacji webowej (opcja menu `Powiadomienia`). Użytkownik może wybrać:
 - W aplikacji - powiadomienia będą dostępne wyłącznie w aplikacji webowej,
 - E-mail - powiadomienia zostaną wysłane na podany adres e-mail,
 - Webhook - powiadomienia zostaną wysłane zapytaniem HTTP na podany adres.
@@ -30,7 +30,7 @@ Składnia dla adresu Webhook: `[[HeaderName:]HeaderValue@]ServiceURI`
 Znaczenie:
 |element|meaning|
 |---|---|
-|HeaderName|Nazwa nagłówka dodawanego do zapytania HTTP. Domyśna wartość to `Authorization`|
+|HeaderName|Nazwa nagłówka dodawanego do zapytania HTTP. Domyślna wartość to `Authorization`|
 |HeaderValue|Wartość zadeklarowanego nagłówka|
 |ServiceURI|Adres serwisu, do którego będzie wysłane powiadomienie|
 

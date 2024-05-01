@@ -1,6 +1,6 @@
 # Rodzaje kont
 
-Wpełnienie formularza rejestracyjnego powoduje automatyczne utworzenie dla użytkownika konta **Darmowego**. Konto to może być później zmienione na jeden z typów płatnych:
+Wypełnienie formularza rejestracyjnego powoduje automatyczne utworzenie dla użytkownika konta **Darmowego**. Konto to może być później zmienione na jeden z typów płatnych:
 
 - **Standard**
 - **Profesjonalne**
@@ -14,14 +14,14 @@ Użytkowników indywidualnych, którzy zarejestrowali konta w serwisie cloud.sig
 
 |Parametr| Konto Darmowe | Konto Standard | Konto Profesjonalne |
 |---|:---:|:---:|:---:|:---:|
-|Liczba zarejestrowanych urządzeniń [szt.]|5|20|100|
+|Liczba zarejestrowanych urządzeń [szt.]|5|20|100|
 |Czas przechowywania danych [dni]|7|30|365|
 
 <br>
 
 ## Limity kont organizacji 
 
-Umowa dotycząca obsługi kont w ramach organizacji umożliwia utworzenie wielu kont i zarządzanie przez użykownika. Jest to opisane w części dotyczącej funkcjonalności dla organizacji.
+Umowa dotycząca obsługi kont w ramach organizacji umożliwia utworzenie wielu kont i zarządzanie przez użytkownika. Jest to opisane w części dotyczącej funkcjonalności dla organizacji.
 
 Limity dla kont użytkowników zarejestrowanych w ramach organizacji są określone w odrębnej umowie. Umowa ta może  określać maksymalną liczbę urządzeń oraz czas przechowywania danych.
 

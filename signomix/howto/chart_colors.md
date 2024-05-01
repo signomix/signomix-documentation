@@ -1,6 +1,6 @@
 # Definiowanie kolorów wykresów
 
-Wykresy są rysowane przy użyciu sidmiu zdefiniowanych kolorów dla linii oraz siedmiu kolorów wypełnień pola pod wykresem.
+Wykresy są rysowane przy użyciu siedmiu zdefiniowanych kolorów dla linii oraz siedmiu kolorów wypełnień pola pod wykresem.
 
 Przykładowa konfiguracja:
 

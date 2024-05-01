@@ -13,7 +13,7 @@ Położenie i rozmiar kontrolek można wygodnie zmieniać z użyciem mechanizmu 
 |[date](widget-date.md)|Prezentacja daty|
 |[devinfo](widget-devinfo.md)|Opis urządzenia|
 |[image](widget-image.md)|Obraz|
-|[led](widget-led.md)|Kontrlka LED| 
+|[led](widget-led.md)|Kontrolka LED| 
 |[link](widget-link.md)|Odnośnik|
 |[map](widget-map.md)|Mapa pokazująca położenie lub trasę urządzenia|
 |[multimap](widget-multimap.md)|Mapa pokazująca położenie wielu urządzeń|
