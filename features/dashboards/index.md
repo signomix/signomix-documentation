@@ -9,22 +9,24 @@ Położenie i rozmiar kontrolek można wygodnie zmieniać z użyciem mechanizmu 
 
 |Typ|Co przedstawia|
 |---|---|
-|[chart](widget-chart.md)|Wykres|
-|[date](widget-date.md)|Prezentacja daty|
-|[devinfo](widget-devinfo.md)|Opis urządzenia|
-|[image](widget-image.md)|Obraz|
-|[led](widget-led.md)|Kontrolka LED| 
-|[link](widget-link.md)|Odnośnik|
-|[map](widget-map.md)|Mapa pokazująca położenie lub trasę urządzenia|
-|[multimap](widget-multimap.md)|Mapa pokazująca położenie wielu urządzeń|
-|[multitrack](widget-multitrack)|Mapa z trasami wielu urządzeń|
-|[plan](widget-plan.md)|Plan lub schemat z danymi|
-|[raw](widget-raw.md)|Dane w formacie JSON|
-|[report](widget-report.md)|Tabelaryczne zestawienie danych|
-|[symbol](widget-symbol.md)|Ostatnia zarejestrowana wartość|
-|[stopwatch](widget-stopwatch.md)|Stoper|
-|[time](widget-time.md)|Prezentacja czasu|
-|[text](widget-text.md)|Treść tekstowa|
+|[Czas](widget-time.md)|Prezentacja czasu|
+|[Data](widget-date.md)|Prezentacja daty|
+|[Informacje o urządzeniu](widget-devinfo.md)|Opis urządzenia|
+|[Karta wartości](widget-symbol.md)|Ostatnia zarejestrowana wartość|
+|[LED](widget-led.md)|Kontrolka LED| 
+|[Mapa](widget-map.md)|Mapa pokazująca położenie lub trasę urządzenia|
+|[Mapa grupowa](widget-multimap.md)|Mapa pokazująca położenie wielu urządzeń|
+|[Obraz](widget-image.md)|Obraz|
+|[Odnośnik](widget-link.md)|Odnośnik|
+|[Plan](widget-plan.md)|Plan lub schemat z danymi|
+|[Przycisk](widget-button.md)| Przycisk wysyłający polecenie|
+|[Raport](widget-report.md)|Tabelaryczne zestawienie danych|
+|[Stoper](widget-stopwatch.md)|Stoper|
+|[Surowe dane](widget-raw.md)|Dane w formacie JSON|
+|[Tekst](widget-text.md)|Treść tekstowa|
+|[Trasy grupowe](widget-multitrack)|Mapa z trasami wielu urządzeń|
+|[Wykres](widget-chart.md)|Wykres|
+|[Wykres grupowy](widget-groupchart.md)|Wykres grupowy|
 
 ## Uprawnienia
 
@@ -39,7 +41,7 @@ wskazać (poprzez podanie listy loginów użytkowników oddzielonych przecinkami
 Definiując pulpit można również oznaczyć go jako "publiczny" i wtedy:
 
 - pulpit jest publicznie dostępny do oglądania w webaplikacji `view.signomix.com` dla każdej osoby znającej unikalny odnośnik do niego,
-- dane wszystkich urządzeń, do których ten pulpit się odwołuje, stają się również w pełni **dostępne dla osób znających odnośnik do pulpitu**
+- dane wszystkich urządzeń, do których ten pulpit się odwołuje, stają się również  **dostępne dla osób znających odnośnik do pulpitu**
 
 Z powyższych względów podejmując decyzję o "upublicznieniu" pulpitu należy podjąć w pełni świadomie.
 

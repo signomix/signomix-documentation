@@ -12,12 +12,12 @@ Konta te różnią się dostępnymi limitami rejestrowanych urządzeń, czasem p
 
 Użytkowników indywidualnych, którzy zarejestrowali konta w serwisie cloud.signomix.com dotyczą limity podane poniżej.
 
-|Parametr| Konto Darmowe | Konto Standard | Konto Profesjonalne |
-|---|:---:|:---:|:---:|:---:|
-|Liczba zarejestrowanych urządzeń [szt.]|5|20|100|
-|Czas przechowywania danych [dni]|7|30|365|
+|Parametr| Konto Darmowe | Konto Standard | Konto Profesjonalne | Organizacja |
+|---|:---:|:---:|:---:|:---:|:---:|
+|Liczba zarejestrowanych urządzeń [szt.]|5|20|100| * |
+|Czas przechowywania danych [dni]|7|30|365| * |
 
-<br>
+<sup>*</sup> zgodnie z zawartą umową
 
 ## Limity kont organizacji 
 

@@ -1,6 +1,6 @@
 # Organizacje
 
-Organizacje to sposób grupowania wielu użytkowników i zarejestrowanych przez nich urządzeń pod wspólną nazwą. Możesz utworzyć organizację dla swojego zespołu, firmy, projektu lub dowolnego innego celu.
+Organizacja to sposób grupowania wielu użytkowników i zarejestrowanych przez nich urządzeń pod wspólną nazwą. Możesz utworzyć organizację dla swojego zespołu, firmy, projektu lub dowolnego innego celu.
 
 Wszyscy użytkownicy współdzielą dostęp do zarejestrowanych przez siebie urządzeń, pulpitów, aplikacji oraz powiadomień.
 
@@ -9,7 +9,7 @@ Dodatkowe funkcjonalności dostępne dla organizacji:
 - reguły powiadomień 
 - definiowalna częstotliwość odświeżania pulpitu
 - zarządzanie użytkownikami
-- zarządzanie aplikacjami
+- zarządzanie konfiguracjami i aplikacjami
 
 W organizacji występują dwa typy użytkowników:
 - użytkownik standardowy - mający dostęp do wszystkich funkcjonalności organizacji, jednak bez możliwości ich konfigurowania,
