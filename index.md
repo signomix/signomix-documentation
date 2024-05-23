@@ -13,6 +13,7 @@
 - [Wersja enterprise](/enterprise/index.md)
 - [Plany rozwoju (mapa drogowa)](https://github.com/orgs/signomix/projects/4)
 - [Regulamin i polityka prywatności](/legal/terms_and_conditions.md)
+- [Słownik pojęć](/dictionary.md)
 
 ## Uwagi
  1. Dokumentacja Signomiksa jest dostępna w języku polskim. Inne wersje językowe (m. inn. angielska) mogą pojawić się w późniejszym terminie, jeżeli będzie to uzasadnione. Obecnie serwisy tłumaczące teksty są łatwo dostępne (również jako funkcja przeglądarki) więc mam nadzieję, że brak wersji językowych nie stanowi dużego problemu.
