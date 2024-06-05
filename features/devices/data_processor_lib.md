@@ -198,10 +198,7 @@ Funkcja `getAverage` służy do uzyskiwania średniej wartości dla danego kana�
 
 ```javascript
 const average = sgx.getAverage("temperature", 10);
-const newAverage = sgx.getAverage("temperature", 10, 23.
-
-```markdown
-);
+const newAverage = sgx.getAverage("temperature", 10, 23.0);
 ```
 
 ## <a name="getminimum"></a>`getMinimum(channelName, scope, newValue)`
