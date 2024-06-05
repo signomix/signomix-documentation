@@ -1,35 +1,32 @@
-Oto kompletna dokumentacja techniczna dla podanej biblioteki, sformatowana jako Markdown z uwzględnieniem wszystkich funkcji i dodanym spisem treści. Symbol `sgx0` został zastąpiony przez `sgx`.
-
-```markdown
 ## Spis treści
 
-- [verify](#verifyreceived-receivedstatus)
-- [accept](#acceptname)
-- [addCommand](#addcommandtargeteui-payload-overwrite)
-- [addPlainCommand](#addplaincommandtargeteui-payload-overwrite)
-- [addHexCommand](#addhexcommandtargeteui-payload-overwrite)
-- [addNotification](#addnotificationnewtype-newmessage)
-- [addVirtualData](#addvirtualdataneweui-newname-newvalue)
-- [getAverage](#getaveragechannelname-scope-newvalue)
-- [getMinimum](#getminimumchannelname-scope-newvalue)
-- [getMaximum](#getmaximumchannelname-scope-newvalue)
-- [getSum](#getsumchannelname-scope-newvalue)
-- [getLastValue](#getlastvaluechannelname)
-- [getLastData](#getlastdatachannelname)
-- [getModulo](#getmodulovalue-divider)
+- [verify](#verify)
+- [accept](#accept)
+- [addCommand](#addcommand)
+- [addPlainCommand](#addplaincommand)
+- [addHexCommand](#addhexcommand)
+- [addNotification](#addnotification)
+- [addVirtualData](#addvirtualdata)
+- [getAverage](#getaverage)
+- [getMinimum](#getminimum)
+- [getMaximum](#getmaximum)
+- [getSum](#getsum)
+- [getLastValue](#getlastvalue)
+- [getLastData](#getlastdata)
+- [getModulo](#getmodulo)
 - [getOutput](#getoutput)
-- [getTimestamp](#gettimestampchannelname)
-- [getTimestampUTC](#gettimestamputcy-m-d-h-min-s)
-- [getValue](#getvaluechannelname)
-- [getStringValue](#getstringvaluechannelname)
-- [put](#putname-newvalue-timestamp)
-- [setState](#setstatenewstate)
-- [setStatus](#setstatusnewstatus)
-- [reverseHex](#reversehexhexstr)
-- [swap32](#swap32val)
-- [distance](#distancelatitude1-longitude1-latitude2-longitude2)
+- [getTimestamp](#gettimestamp)
+- [getTimestampUTC](#gettimestamputc)
+- [getValue](#getvalue)
+- [getStringValue](#getstringvalue)
+- [put](#put)
+- [setState](#setstate)
+- [setStatus](#setstatus)
+- [reverseHex](#reversehex)
+- [swap32](#swap32)
+- [distance](#distance)
 
-## `verify(received, receivedStatus)`
+## <a name="verify"></a>`verify(received, receivedStatus)`
 
 Funkcja `verify` służy do weryfikacji otrzymanych danych i aktualizacji stanu obiektu.
 
@@ -42,7 +39,19 @@ Funkcja `verify` służy do weryfikacji otrzymanych danych i aktualizacji stanu 
 
 - `void`: Funkcja nie zwraca żadnej wartości.
 
-## `accept(name)`
+### Przykład użycia
+
+```javascript
+const receivedData = [
+    { name: "temperature", value: 22.5, timestamp: 1628765432 },
+    { name: "humidity", value: 60, timestamp: 1628765432 }
+];
+const status = "ok";
+
+sgx.verify(receivedData, status);
+```
+
+## <a name="accept"></a>`accept(name)`
 
 Funkcja `accept` służy do zaakceptowania danych o podanej nazwie i zapisania ich w wynikach.
 
@@ -54,7 +63,13 @@ Funkcja `accept` służy do zaakceptowania danych o podanej nazwie i zapisania i
 
 - `void`: Funkcja nie zwraca żadnej wartości.
 
-## `addCommand(targetEUI, payload, overwrite)`
+### Przykład użycia
+
+```javascript
+sgx.accept("temperature");
+```
+
+## <a name="addcommand"></a>`addCommand(targetEUI, payload, overwrite)`
 
 Funkcja `addCommand` służy do dodawania nowej komendy.
 
@@ -68,7 +83,17 @@ Funkcja `addCommand` służy do dodawania nowej komendy.
 
 - `void`: Funkcja nie zwraca żadnej wartości.
 
-## `addPlainCommand(targetEUI, payload, overwrite)`
+### Przykład użycia
+
+```javascript
+const targetEUI = "00124B0004F12345";
+const payload = { command: "activate", parameters: { duration: 10 } };
+const overwrite = true;
+
+sgx.addCommand(targetEUI, payload, overwrite);
+```
+
+## <a name="addplaincommand"></a>`addPlainCommand(targetEUI, payload, overwrite)`
 
 Funkcja `addPlainCommand` służy do dodawania nowej komendy w formacie zwykłego tekstu.
 
@@ -82,7 +107,17 @@ Funkcja `addPlainCommand` służy do dodawania nowej komendy w formacie zwykłeg
 
 - `void`: Funkcja nie zwraca żadnej wartości.
 
-## `addHexCommand(targetEUI, payload, overwrite)`
+### Przykład użycia
+
+```javascript
+const targetEUI = "00124B0004F12345";
+const payload = { command: "deactivate" };
+const overwrite = false;
+
+sgx.addPlainCommand(targetEUI, payload, overwrite);
+```
+
+## <a name="addhexcommand"></a>`addHexCommand(targetEUI, payload, overwrite)`
 
 Funkcja `addHexCommand` służy do dodawania nowej komendy z ładunkiem w formacie szesnastkowym.
 
@@ -96,7 +131,17 @@ Funkcja `addHexCommand` służy do dodawania nowej komendy z ładunkiem w formac
 
 - `void`: Funkcja nie zwraca żadnej wartości.
 
-## `addNotification(newType, newMessage)`
+### Przykład użycia
+
+```javascript
+const targetEUI = "00124B0004F12345";
+const payload = "00FFAA01";
+const overwrite = true;
+
+sgx.addHexCommand(targetEUI, payload, overwrite);
+```
+
+## <a name="addnotification"></a>`addNotification(newType, newMessage)`
 
 Funkcja `addNotification` służy do dodawania nowej notyfikacji.
 
@@ -109,7 +154,13 @@ Funkcja `addNotification` służy do dodawania nowej notyfikacji.
 
 - `void`: Funkcja nie zwraca żadnej wartości.
 
-## `addVirtualData(newEUI, newName, newValue)`
+### Przykład użycia
+
+```javascript
+sgx.addNotification("info", "Device activated successfully.");
+```
+
+## <a name="addvirtualdata"></a>`addVirtualData(newEUI, newName, newValue)`
 
 Funkcja `addVirtualData` służy do dodawania nowych danych wirtualnych.
 
@@ -123,7 +174,13 @@ Funkcja `addVirtualData` służy do dodawania nowych danych wirtualnych.
 
 - `void`: Funkcja nie zwraca żadnej wartości.
 
-## `getAverage(channelName, scope, newValue)`
+### Przykład użycia
+
+```javascript
+sgx.addVirtualData("00124B0004F67890", "virtualTemperature", 25);
+```
+
+## <a name="getaverage"></a>`getAverage(channelName, scope, newValue)`
 
 Funkcja `getAverage` służy do uzyskiwania średniej wartości dla danego kanału.
 
@@ -137,7 +194,17 @@ Funkcja `getAverage` służy do uzyskiwania średniej wartości dla danego kana�
 
 - `Number`: Średnia wartość dla danego kanału.
 
-## `getMinimum(channelName, scope, newValue)`
+### Przykład użycia
+
+```javascript
+const average = sgx.getAverage("temperature", 10);
+const newAverage = sgx.getAverage("temperature", 10, 23.
+
+```markdown
+);
+```
+
+## <a name="getminimum"></a>`getMinimum(channelName, scope, newValue)`
 
 Funkcja `getMinimum` służy do uzyskiwania minimalnej wartości dla danego kanału.
 
@@ -151,7 +218,14 @@ Funkcja `getMinimum` służy do uzyskiwania minimalnej wartości dla danego kana
 
 - `Number`: Minimalna wartość dla danego kanału.
 
-## `getMaximum(channelName, scope, newValue)`
+### Przykład użycia
+
+```javascript
+const minimum = sgx.getMinimum("temperature", 10);
+const newMinimum = sgx.getMinimum("temperature", 10, 18);
+```
+
+## <a name="getmaximum"></a>`getMaximum(channelName, scope, newValue)`
 
 Funkcja `getMaximum` służy do uzyskiwania maksymalnej wartości dla danego kanału.
 
@@ -165,7 +239,14 @@ Funkcja `getMaximum` służy do uzyskiwania maksymalnej wartości dla danego kan
 
 - `Number`: Maksymalna wartość dla danego kanału.
 
-## `getSum(channelName, scope, newValue)`
+### Przykład użycia
+
+```javascript
+const maximum = sgx.getMaximum("temperature", 10);
+const newMaximum = sgx.getMaximum("temperature", 10, 27);
+```
+
+## <a name="getsum"></a>`getSum(channelName, scope, newValue)`
 
 Funkcja `getSum` służy do uzyskiwania sumy wartości dla danego kanału.
 
@@ -179,7 +260,14 @@ Funkcja `getSum` służy do uzyskiwania sumy wartości dla danego kanału.
 
 - `Number`: Suma wartości dla danego kanału.
 
-## `getLastValue(channelName)`
+### Przykład użycia
+
+```javascript
+const sum = sgx.getSum("temperature", 10);
+const newSum = sgx.getSum("temperature", 10, 22);
+```
+
+## <a name="getlastvalue"></a>`getLastValue(channelName)`
 
 Funkcja `getLastValue` służy do uzyskiwania ostatniej wartości dla danego kanału.
 
@@ -191,7 +279,13 @@ Funkcja `getLastValue` służy do uzyskiwania ostatniej wartości dla danego kan
 
 - `Mixed`: Ostatnia wartość dla danego kanału lub `null`, jeśli brak danych.
 
-## `getLastData(channelName)`
+### Przykład użycia
+
+```javascript
+const lastValue = sgx.getLastValue("temperature");
+```
+
+## <a name="getlastdata"></a>`getLastData(channelName)`
 
 Funkcja `getLastData` służy do uzyskiwania ostatnich danych dla danego kanału.
 
@@ -203,9 +297,15 @@ Funkcja `getLastData` służy do uzyskiwania ostatnich danych dla danego kanału
 
 - `Object`: Ostatnie dane dla danego kanału.
 
-## `getModulo(value, divider)`
+### Przykład użycia
 
-Funkcja `getModulo` służy do obliczania reszty z dzielenia.
+```javascript
+const lastData = sgx.getLastData("temperature");
+```
+
+## <a name="getmodulo"></a>`getModulo(value, divider)`
+
+Funkcja `getModulo` służy do uzyskiwania reszty z dzielenia wartości przez dzielnik.
 
 ### Parametry
 
@@ -214,17 +314,29 @@ Funkcja `getModulo` służy do obliczania reszty z dzielenia.
 
 ### Zwraca
 
-- `Number`: Reszta z dzielenia `value` przez `divider`.
+- `Number`: Reszta z dzielenia.
 
-## `getOutput()`
+### Przykład użycia
 
-Funkcja `getOutput` służy do uzyskiwania wyniku operacji.
+```javascript
+const modulo = sgx.getModulo(10, 3); // 1
+```
+
+## <a name="getoutput"></a>`getOutput()`
+
+Funkcja `getOutput` służy do uzyskiwania wyników przetwarzania.
 
 ### Zwraca
 
-- `Mixed`: Wynik operacji.
+- `Mixed`: Wynik przetwarzania.
 
-## `getTimestamp(channelName)`
+### Przykład użycia
+
+```javascript
+const output = sgx.getOutput();
+```
+
+## <a name="gettimestamp"></a>`getTimestamp(channelName)`
 
 Funkcja `getTimestamp` służy do uzyskiwania znacznika czasu dla danego kanału.
 
@@ -236,17 +348,21 @@ Funkcja `getTimestamp` służy do uzyskiwania znacznika czasu dla danego kanału
 
 - `Number`: Znacznik czasu dla danego kanału.
 
-## `getTimestampUTC(y, m, d, h, min, s)`
+### Przykład użycia
 
-Funkcja `getTimestampUTC` służy do uzyskiwania znacznika czasu UTC.
+```javascript
+const timestamp = sgx.getTimestamp("temperature");
+```
+
+## <a name="gettimestamputc"></a>`getTimestampUTC(y, m, d, h, min, s)`
+
+Funkcja `getTimestampUTC` służy do uzyskiwania znacznika czasu UTC na podstawie podanych parametrów.
 
 ### Parametry
 
 - `y` (Number): Rok.
 - `m` (Number): Miesiąc.
-- `d` (Number
-
-): Dzień.
+- `d` (Number): Dzień.
 - `h` (Number): Godzina.
 - `min` (Number): Minuta.
 - `s` (Number): Sekunda.
@@ -255,7 +371,13 @@ Funkcja `getTimestampUTC` służy do uzyskiwania znacznika czasu UTC.
 
 - `Number`: Znacznik czasu UTC.
 
-## `getValue(channelName)`
+### Przykład użycia
+
+```javascript
+const timestampUTC = sgx.getTimestampUTC(2024, 6, 5, 12, 0, 0);
+```
+
+## <a name="getvalue"></a>`getValue(channelName)`
 
 Funkcja `getValue` służy do uzyskiwania wartości dla danego kanału.
 
@@ -267,7 +389,13 @@ Funkcja `getValue` służy do uzyskiwania wartości dla danego kanału.
 
 - `Mixed`: Wartość dla danego kanału lub `null`, jeśli brak danych.
 
-## `getStringValue(channelName)`
+### Przykład użycia
+
+```javascript
+const value = sgx.getValue("temperature");
+```
+
+## <a name="getstringvalue"></a>`getStringValue(channelName)`
 
 Funkcja `getStringValue` służy do uzyskiwania wartości tekstowej dla danego kanału.
 
@@ -279,7 +407,13 @@ Funkcja `getStringValue` służy do uzyskiwania wartości tekstowej dla danego k
 
 - `String`: Wartość tekstowa dla danego kanału lub `null`, jeśli brak danych.
 
-## `put(name, newValue, timestamp)`
+### Przykład użycia
+
+```javascript
+const stringValue = sgx.getStringValue("temperature");
+```
+
+## <a name="put"></a>`put(name, newValue, timestamp)`
 
 Funkcja `put` służy do umieszczania nowych danych.
 
@@ -293,7 +427,14 @@ Funkcja `put` służy do umieszczania nowych danych.
 
 - `void`: Funkcja nie zwraca żadnej wartości.
 
-## `setState(newState)`
+### Przykład użycia
+
+```javascript
+sgx.put("temperature", 23.5);
+sgx.put("temperature", 23.5, 1628765432);
+```
+
+## <a name="setstate"></a>`setState(newState)`
 
 Funkcja `setState` służy do ustawiania nowego stanu urządzenia.
 
@@ -305,7 +446,13 @@ Funkcja `setState` służy do ustawiania nowego stanu urządzenia.
 
 - `void`: Funkcja nie zwraca żadnej wartości.
 
-## `setStatus(newStatus)`
+### Przykład użycia
+
+```javascript
+sgx.setState("active");
+```
+
+## <a name="setstatus"></a>`setStatus(newStatus)`
 
 Funkcja `setStatus` służy do ustawiania nowego statusu urządzenia.
 
@@ -317,7 +464,13 @@ Funkcja `setStatus` służy do ustawiania nowego statusu urządzenia.
 
 - `void`: Funkcja nie zwraca żadnej wartości.
 
-## `reverseHex(hexStr)`
+### Przykład użycia
+
+```javascript
+sgx.setStatus("offline");
+```
+
+## <a name="reversehex"></a>`reverseHex(hexStr)`
 
 Funkcja `reverseHex` służy do odwracania kolejności znaków w łańcuchu szesnastkowym.
 
@@ -329,7 +482,13 @@ Funkcja `reverseHex` służy do odwracania kolejności znaków w łańcuchu szes
 
 - `String`: Odwrócony łańcuch szesnastkowy.
 
-## `swap32(val)`
+### Przykład użycia
+
+```javascript
+const reversedHex = sgx.reverseHex("00FFAA01"); // "01AAFF00"
+```
+
+## <a name="swap32"></a>`swap32(val)`
 
 Funkcja `swap32` służy do zmiany kolejności bajtów w liczbie 32-bitowej.
 
@@ -341,7 +500,13 @@ Funkcja `swap32` służy do zmiany kolejności bajtów w liczbie 32-bitowej.
 
 - `Number`: Liczba z zmienioną kolejnością bajtów.
 
-## `distance(latitude1, longitude1, latitude2, longitude2)`
+### Przykład użycia
+
+```javascript
+const swapped = sgx.swap32(0x12345678); // 0x78563412
+```
+
+## <a name="distance"></a>`distance(latitude1, longitude1, latitude2, longitude2)`
 
 Funkcja `distance` służy do obliczania odległości między dwoma punktami geograficznymi.
 
@@ -356,4 +521,8 @@ Funkcja `distance` służy do obliczania odległości między dwoma punktami geo
 
 - `Number`: Odległość między dwoma punktami w kilometrach.
 
+### Przykład użycia
+
+```javascript
+const dist = sgx.distance(52.2296756, 21.0122287, 41.8919300, 12.5113300);
 ```
