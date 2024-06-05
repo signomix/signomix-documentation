@@ -1,6 +1,5 @@
 Oczywiście, poniżej znajduje się uzupełniona dokumentacja z dodanymi przykładami użycia dla każdej funkcji.
 
-```markdown
 ## Spis treści
 
 - [verify](#verifyreceived-receivedstatus)
@@ -528,5 +527,4 @@ Funkcja `distance` służy do obliczania odległości między dwoma punktami geo
 
 ```javascript
 const dist = sgx.distance(52.2296756, 21.0122287, 41.8919300, 12.5113300);
-```
 ```
