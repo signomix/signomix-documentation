@@ -43,7 +43,7 @@ Funkcja `verify` służy do weryfikacji otrzymanych danych i aktualizacji stanu 
 
 ### Przykład użycia
 
-```javascript
+<code>
 const receivedData = [
     { name: "temperature", value: 22.5, timestamp: 1628765432 },
     { name: "humidity", value: 60, timestamp: 1628765432 }
@@ -51,7 +51,7 @@ const receivedData = [
 const status = "ok";
 
 sgx.verify(receivedData, status);
-```
+</code>
 
 ## `accept(name)`
 
