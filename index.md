@@ -3,17 +3,44 @@
 
 ## Spis treści
 
+<div class="row">
+<div class="col">
+
 - [Ogólny opis serwisu](/introduction.md)
 - [Jak zacząć](/getting_started.md)
 - [Funkcjonalności](/features/index.md)
-- [Poradniki](/howto/index.md)
+    - Rodzaje kont
+    - Rejestracja konta i logowanie do aplikacji webowej
+    - Strona startowa
+    - Pulpity
+    - Urządzenia
+    - Grupy urządzeń
+    - Reguły
+    - Alerts
+    - Wiadomości
+    - Konto użytkownika
+    - Rejestrowanie danych
+    - Pobieranie danych
+    - Predefiniowane raporty
 - [Wersja dla organizacji](/administration/index.md)
-- [Informacje dla programistów](/development/index.md)
-- [Rest API](/api/index.md)
 - [Wersja enterprise](/enterprise/index.md)
-- [Plany rozwoju (mapa drogowa)](https://github.com/orgs/signomix/projects/4)
 - [Regulamin i polityka prywatności](/legal/terms_and_conditions.md)
+
+</div>
+<div class="col">
+
+- [Poradniki](/howto/index.md)
+- [Informacje dla programistów](/development/index.md)
+  - [Budowa i uruchamianie Signomiksa lokalnie](/development/getting-started.md)
+- [Rest API](/api/index.md)
+  - [Receiver API](/api/receiver_api.md)
+  - [Wysyłanie danych przez HTTP](/api/sending_data.md)
+  - [Pobieranie danych przez HTTP](/api/downloading-data.md)
+- [Plany rozwoju (mapa drogowa)](https://github.com/orgs/signomix/projects/4)
 - [Słownik pojęć](/dictionary.md)
+
+</div>
+</div>
 
 ## Uwagi
  1. Dokumentacja Signomiksa jest dostępna w języku polskim. Inne wersje językowe (m. inn. angielska) mogą pojawić się w późniejszym terminie, jeżeli będzie to uzasadnione. Obecnie serwisy tłumaczące teksty są łatwo dostępne (również jako funkcja przeglądarki) więc mam nadzieję, że brak wersji językowych nie stanowi dużego problemu.
