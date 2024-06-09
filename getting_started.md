@@ -13,8 +13,10 @@ Korzystanie z Signomiksa wymaga zarejestrowania konta użytkownika.
 
 ## Dodawanie urządzenia
 
+<!-- TODO -->
 DO OPISANIA
 
 ## Przeglądanie pulpitu urządzenia
 
+<!-- TODO -->
 DO OPISANIA

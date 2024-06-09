@@ -1,5 +1,11 @@
 ## Spis treści
 
+Definicja źródła danych (urządzenia) w Signomiksie umożliwia zdefiniowanie kodu dla procesora danych. W momencie odebrania nowych danych z tego źródła, procesor danych uruchamia interpreter języka JavaScript i wykonuje kod zdefiniowany dla tego źródła danych.
+
+Tworząc kod dla procesora użytkownik może wykorzystać funkcje biblioteki `sgx` wbudowanej w procesor danych. Poniżej dokumentacja tej biblioteki.
+
+<!-- TODO zmienne biblioteki -->
+
 - [verify](#verify)
 - [accept](#accept)
 - [addCommand](#addcommand)

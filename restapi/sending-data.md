@@ -1,4 +1,4 @@
-# Przesyłanie danych
+# Przesyłanie danych przez REST API
 
 Poniższe przykłady dotyczą urządzeń typu HTTP (nazywanych też w dokumentacji Generic lub Direct). Takie 
 urządzenia powinny mieć możliwość wysyłania zapytań HTTP bezpośrednio do API Signomiksa.
@@ -15,6 +15,7 @@ Obydwa typy adresów mogą zwrócić kod błędu jeżeli:
 - urządzenie, którego identyfikator EUI jest przesłany w żądaniu nie zostanie znalezione w bazie danych
 - kod autoryzacyjny urządzenia przesłany w żądaniu nie jest zgodny z konfiguracją tego urządzenia w bazie danych.
 
+Zobacz też: [Receiver API](/restapi/receiver.md)
 
 ## Przykład 1
 
@@ -54,6 +55,8 @@ content-length: 32
 
 eyJ0eXBlIjoiYiIsInZhbHVlIjoxfQ==
 ```
+
+<!-- TODO: zobacz też dokumentacja komend -->
 
 ### Odpowiedź 
 

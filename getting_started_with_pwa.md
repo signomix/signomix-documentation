@@ -20,10 +20,3 @@ W przypadku Microsoft Edge:
 
 W obydwu powyższych przypadkach instalacja powoduje dodanie na pulpicie komputera lub urządzenia mobilnego ikony będącej skrótem do aplikacji PWA Signomix. Kliknięcie jej powoduje uruchomienie aplikacji w dedykowanym oknie.
 
-## Dodawanie urządzenia
-
-DO OPISANIA
-
-## Przeglądanie pulpitu urządzenia
-
-DO OPISANIA

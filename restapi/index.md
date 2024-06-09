@@ -6,7 +6,7 @@ Wszystkie funkcje backendu Signomiksa są udostępniane przez REST API. Poniżej
 
 Dokumentacja poszczególnych serwisów platformy będzie sukcesywnie uzupełniana. Opisy wygenerowane na podstawie kodu źródłowego przy wsparciu ChatGPT są dostępne dla poniższych modułów:
 
-[Receiver](receiver_api.md)
+[Receiver](receiver-api.md)
 
 ## Dokumentacja online
 
@@ -29,6 +29,6 @@ https://signomix.com/api/provider/q/swagger
 
 ## Poradniki
 
-[Przesyłanie danych po HTTP](sending_data.md)
+[Przesyłanie danych po HTTP](sending-data.md)
 
-Wkrótce
+<!-- TODO -->
