@@ -4,7 +4,7 @@ Reguły definiują jakie akcje mają być wykonane w odpowiedzi na zdarzenia zwi
 z przesyłaniem przez urządzenia
 nowych danych. Spełnienie przez dane warunków określonych w regułach powoduje 
 wygenerowanie w serwisie wiadomości 
-określonego typu. <br>
+określonego typu. <br> 
 Reguły mogą być definiowane dla:
 - wybranego urządzenia,
 - wybranej grupy urządzeń,
