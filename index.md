@@ -32,6 +32,7 @@
 - [Poradniki](/howto/index.md)
 - [Informacje dla programistów](/development/index.md)
   - [Budowa i uruchamianie Signomiksa lokalnie](/development/getting-started.md)
+  - [Funkcje biblioteki procesora danych](/features/devices/data_processor_lib.md)
 - [Rest API](/restapi/index.md)
   - [Receiver API](/restapi/receiver.md)
   - [Wysyłanie danych](/restapi/sending-data.md)

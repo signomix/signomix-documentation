@@ -2,4 +2,4 @@
 
 DO UZUPEŁNIENIA
 
-[Fukcje biblioteki procesora danych](data_processor_lib.md)
+[Funkcje biblioteki procesora danych](/features/devices/data_processor_lib.md)
