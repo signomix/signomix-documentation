@@ -9,18 +9,18 @@
 - [Ogólny opis serwisu](/introduction.md)
 - [Jak zacząć](/getting_started.md)
 - [Funkcjonalności](/features/index.md)
-    - Rodzaje kont
+    - [Rodzaje kont](/features/account_types.md)
     - Rejestracja konta i logowanie do aplikacji webowej
     - Strona startowa
-    - Pulpity
-    - Urządzenia
-    - Grupy urządzeń
-    - Reguły
-    - Alerts
+    - [Pulpity](/features/dashboards/index.md)
+    - [Urządzenia](/features/devices/index.md)
+    - [Grupy urządzeń](/features/groups/index.md)
+    - [Reguły](/features/rules/index.html)
+    - [Alerts](/features/alerts/index.md)
     - Wiadomości
-    - Konto użytkownika
-    - Rejestrowanie danych
-    - Pobieranie danych
+    - [Konto użytkownika](/features/account/index.md)
+    - [Rejestrowanie danych](/features/data_provisioning.md)
+    - [Pobieranie danych](/features/downloading_data.md)
     - Predefiniowane raporty
 - [Wersja dla organizacji](/administration/index.md)
 - [Wersja enterprise](/enterprise/index.md)
