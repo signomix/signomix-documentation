@@ -59,7 +59,9 @@ sgx.verify(receivedData, status);
 
 ## <a name="accept"></a>`accept(name)`
 
-Funkcja `accept` służy do zaakceptowania danych o podanej nazwie i zapisania ich w wynikach.
+Funkcja `accept` służy do zaakceptowania danych o podanej nazwie i zapisania ich w wynikach. Jej wywołanie może być konieczne w przypadku użycia w kodzie funkcji `put`.
+
+Patrz też: [put](#put)
 
 ### Parametry
 
@@ -436,6 +438,24 @@ Funkcja `put` służy do umieszczania nowych danych.
 sgx.put("temperature", 23.5);
 sgx.put("temperature", 23.5, 1628765432);
 ```
+
+### Uwagi
+
+Użycie funkcji `put` wyłącza mechanizm automatycznego akceptowania i zapisywania w bazie odebranych danych. Jeśli w kodzie procesora danych zostanie użyta funkcja `put` to w bazie 
+zostaną zarejestrowane jedynie dane przekazane w funkcjach `put` oraz `accept`.
+
+### Przykład użycia
+
+```javascript
+// Signomix odebrał request z danymi o nazwach `temperature` i `humidity`, jednak w skrypcie 
+// procesora danych chcemy dodać jeszcze wartość danej `pressure`
+sgx.put("pressure", 1000)
+// bez poniższych linii w bazie zostaną zapisane wartości null dla `temperature` oraz `humidity`
+sgx.accept("temperature")
+sgx.accept("humidity")
+```
+
+Patrz też: [accept](#accept)
 
 ## <a name="setstate"></a>`setState(newState)`
 
