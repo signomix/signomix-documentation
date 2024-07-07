@@ -9,9 +9,6 @@ Położenie i rozmiar kontrolek można wygodnie zmieniać z użyciem mechanizmu 
 
 |Typ|Co przedstawia|
 |---|---|
-|[Czas](widget-time.md)|Prezentacja czasu|
-|[Data](widget-date.md)|Prezentacja daty|
-|[Informacje o urządzeniu](widget-devinfo.md)|Opis urządzenia|
 |[Karta wartości](widget-symbol.md)|Ostatnia zarejestrowana wartość|
 |[LED](widget-led.md)|Kontrolka LED| 
 |[Mapa](widget-map.md)|Mapa pokazująca położenie lub trasę urządzenia|
@@ -21,12 +18,18 @@ Położenie i rozmiar kontrolek można wygodnie zmieniać z użyciem mechanizmu 
 |[Plan](widget-plan.md)|Plan lub schemat z danymi|
 |[Przycisk](widget-button.md)| Przycisk wysyłający polecenie|
 |[Raport](widget-report.md)|Tabelaryczne zestawienie danych|
-|[Stoper](widget-stopwatch.md)|Stoper|
-|[Surowe dane](widget-raw.md)|Dane w formacie JSON|
 |[Tekst](widget-text.md)|Treść tekstowa|
 |[Trasy grupowe](widget-multitrack)|Mapa z trasami wielu urządzeń|
 |[Wykres](widget-chart.md)|Wykres|
 |[Wykres grupowy](widget-groupchart.md)|Wykres grupowy|
+
+<!--
+|[Czas](widget-time.md)|Prezentacja czasu|
+|[Data](widget-date.md)|Prezentacja daty|
+|[Informacje o urządzeniu](widget-devinfo.md)|Opis urządzenia|
+|[Stoper](widget-stopwatch.md)|Stoper|
+|[Surowe dane](widget-raw.md)|Dane w formacie JSON|
+-->
 
 ## Uprawnienia
 
