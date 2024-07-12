@@ -1,0 +1,117 @@
+{
+    "name": "as.up.data.forward",
+    "time": "2024-07-10T10:31:53.319537615Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "eui-24e124468d355937",
+          "application_ids": {
+            "application_id": "smart-sense-app"
+          },
+          "dev_eui": "24E124468D355937",
+          "join_eui": "24E124C0002A0001",
+          "dev_addr": "260B39A6"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.ApplicationUp",
+      "end_device_ids": {
+        "device_id": "eui-24e124468d355937",
+        "application_ids": {
+          "application_id": "smart-sense-app"
+        },
+        "dev_eui": "24E124468D355937",
+        "join_eui": "24E124C0002A0001",
+        "dev_addr": "260B39A6"
+      },
+      "correlation_ids": [
+        "gs:uplink:01J2E366GN9S42G5XAFW6JFSYF"
+      ],
+      "received_at": "2024-07-10T10:31:53.315252688Z",
+      "uplink_message": {
+        "session_key_id": "AZAb6L55b6jfOFcjvFJzuw==",
+        "f_port": 85,
+        "f_cnt": 7177,
+        "frm_payload": "/xkABAXNzHdD/xkBBAWamXhD/xkCBAWaGW9D/xkDBAV7FEhC/xkEBAV7FC4+/xkFBAUK1yM8/xkGBAWamQVB/xkHBAXFIABA/xkIBAWmm0Q7/xkJBAWmm0Q7/xkKBAU73/8//xkLBAXs0U5D/xkMBAUAAARB/xkNBAVmZrJB/xkOBAUfRTBD",
+        "decoded_payload": {
+          "chn1": 247.8000030517578,
+          "chn10": 0.003000000026077032,
+          "chn11": 1.9989999532699585,
+          "chn12": 206.82000732421875,
+          "chn13": 8.25,
+          "chn14": 22.299999237060547,
+          "chn15": 176.27000427246094,
+          "chn2": 248.60000610351562,
+          "chn3": 239.10000610351562,
+          "chn4": 50.02000045776367,
+          "chn5": 0.17000000178813934,
+          "chn6": 0.009999999776482582,
+          "chn7": 8.350000381469727,
+          "chn8": 2.002000093460083,
+          "chn9": 0.003000000026077032
+        },
+        "rx_metadata": [
+          {
+            "gateway_ids": {
+              "gateway_id": "my-ttig-1",
+              "eui": "58A0CBFFFE8013A9"
+            },
+            "time": "2024-07-10T10:31:52.979274988Z",
+            "timestamp": 3496988915,
+            "rssi": -78,
+            "channel_rssi": -78,
+            "snr": 9,
+            "location": {
+              "latitude": 51.57426725879415,
+              "longitude": 19.261481030328895,
+              "source": "SOURCE_REGISTRY"
+            },
+            "uplink_token": "ChcKFQoJbXktdHRpZy0xEghYoMv//oATqRDzob+DDRoLCJnGubQGEPu58zMguOqgpuPZBA==",
+            "received_at": "2024-07-10T10:31:53.029396281Z"
+          }
+        ],
+        "settings": {
+          "data_rate": {
+            "lora": {
+              "bandwidth": 125000,
+              "spreading_factor": 7,
+              "coding_rate": "4/5"
+            }
+          },
+          "frequency": "867100000",
+          "timestamp": 3496988915,
+          "time": "2024-07-10T10:31:52.979274988Z"
+        },
+        "received_at": "2024-07-10T10:31:53.109815688Z",
+        "consumed_airtime": "0.240896s",
+        "version_ids": {
+          "brand_id": "milesight-iot",
+          "model_id": "uc100",
+          "hardware_version": "V1.0",
+          "firmware_version": "1.x",
+          "band_id": "EU_863_870"
+        },
+        "network_ids": {
+          "net_id": "000013",
+          "ns_id": "EC656E0000000181",
+          "tenant_id": "ttn",
+          "cluster_id": "eu1",
+          "cluster_address": "eu1.cloud.thethings.network"
+        }
+      }
+    },
+    "correlation_ids": [
+      "gs:uplink:01J2E366GN9S42G5XAFW6JFSYF"
+    ],
+    "origin": "ip-10-100-4-225.eu-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgN0dG4="
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01J2E366Q7K6Y0TQ4FG3NCDWE3"
+  }
