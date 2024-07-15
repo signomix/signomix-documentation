@@ -17,7 +17,7 @@ Położenie i rozmiar kontrolek można wygodnie zmieniać z użyciem mechanizmu 
 |[Odnośnik](widget-link.md)|Odnośnik|
 |[Plan](widget-plan.md)|Plan lub schemat z danymi|
 |[Przycisk](widget-button.md)| Przycisk wysyłający polecenie|
-|[Raport](widget-report.md)|Tabelaryczne zestawienie danych|
+|[Tabela z danymi](widget-report.md)|Tabelaryczne zestawienie danych|
 |[Tekst](widget-text.md)|Treść tekstowa|
 |[Trasy grupowe](widget-multitrack)|Mapa z trasami wielu urządzeń|
 |[Wykres](widget-chart.md)|Wykres|
