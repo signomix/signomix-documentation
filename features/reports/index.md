@@ -1,3 +1,3 @@
 # Serwer raportów
 
-Dokumentacja w trakcie przygotowywania
+**Funkcjonalność eksperymentalna** - dokumentacja w przygotowaniu
