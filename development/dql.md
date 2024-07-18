@@ -23,7 +23,10 @@ Przy czym:
 - `minimum n [new v]` - pobranie minimalnej wartości z `n` ostatnich pomiarów, opcjonalnie uwzględniając dodatkową wartość `v`
 - `maximum n [new v]` - pobranie maksymalnej wartości z `n` ostatnich pomiarów, opcjonalnie uwzględniając dodatkową wartość `v`
 - `from {d1} [to {d2}]` - od punktu czasowego zdefiniowanego przez `{d1}`, do punktu czasowego zdefiniowanego przez `{d1}`.
+- `sback n` - uwzględnienie danych zarejestrowanych maksymalnie `n` sekund wcześniej
 - `class classFullName` - nazwa klasy Java implementującej logikę raportu (patrz: [Server Raportów](/features/reports/index.md))
+
+Parametr `sback` jest uwzględniany przy pobieraniu ostatnich pomiarów grupy. Jeśli nie jest podany, to uwzględniane są dane zarejestrowane maksymalnie godzinę wcześniej. Parametr ten umożliwia odrzucenie danych ze źródeł, które nie przesłały danych w ostatnim czasie (np. przestały działać, ale istnieją dane historyczne, które nie powinny być prezentowane w raporcie).
 
 Definicja punktów czasowych `{d1, d2}`:
 - data zapisana w formacie `yyyy-MM-dd'T'HH:mm:ss.SSSX` lub `yyyy-MM-dd'T'HH:mm:ssX` lub jako `Unix time`  (https://en.wikipedia.org/wiki/Unix_time) (może być podana również jako liczba milisekund)
