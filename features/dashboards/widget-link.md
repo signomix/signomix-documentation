@@ -8,4 +8,4 @@ Konfigurując kontrolkę `Odnośnik' należy wypełnić pola:
 
 - **Tytuł** - tekst wyświetlany na przycisku
 - **Typ** - typ kontrolki: `Odnośnik`
-- **EUI pulpitu** - identyfikator źródła danych
+- **EUI pulpitu** - identyfikator pulpitu, który ma być wyświetlony po kliknięciu przycisku

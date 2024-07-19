@@ -19,6 +19,7 @@ Położenie i rozmiar kontrolek można wygodnie zmieniać z użyciem mechanizmu 
 |[Przycisk](widget-button.md)| Przycisk wysyłający polecenie|
 |[Tabela z danymi](widget-report.md)|Tabelaryczne zestawienie danych|
 |[Tekst](widget-text.md)|Treść tekstowa|
+|[Informacje o źródle danych](widget-info.md)|Informacje o źródle danych (urządzeniu)|
 |[Trasy grupowe](widget-multitrack)|Mapa z trasami wielu urządzeń|
 |[Wykres](widget-chart.md)|Wykres|
 |[Wykres grupowy](widget-groupchart.md)|Wykres grupowy|
@@ -26,7 +27,6 @@ Położenie i rozmiar kontrolek można wygodnie zmieniać z użyciem mechanizmu 
 <!--
 |[Czas](widget-time.md)|Prezentacja czasu|
 |[Data](widget-date.md)|Prezentacja daty|
-|[Informacje o urządzeniu](widget-devinfo.md)|Opis urządzenia|
 |[Stoper](widget-stopwatch.md)|Stoper|
 |[Surowe dane](widget-raw.md)|Dane w formacie JSON|
 -->

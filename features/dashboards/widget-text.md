@@ -1,4 +1,4 @@
-# Kontrolka typu `text`
+# Kontrolka typu `Tekst`
 
 Pozwala umieścić na pulpicie tekst sformatowany z zastosowaniem tagów `HTML`.
 
