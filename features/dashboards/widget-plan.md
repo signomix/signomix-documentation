@@ -19,7 +19,12 @@ Konfigurując kontrolkę `Odnośnik' należy wypełnić pola:
 
 ## Kod źródłowy planu
 
-Kod źródłowy SVG zdefiniowany w polu `Opis` kontrolki musi spełniać kilka reguł.
+Kod źródłowy SVG zdefiniowany w polu `Opis` kontrolki musi spełniać kilka reguł:
+
+- kod SVG powinien być czysty (pure SVG, plain SVG) - nie powinien być uzależniony od dodatków wstawianych często przez zawansowane edytory (jak np. Inkscape, Adobe Ilustrator itp.) 
+- kod musi zawierać definicję `viewbox` - patrz przykład poniżej
+
+Należy również pamiętać, że koordynaty zdefiniowane dla źródeł danych będą interpretowane jako koordynaty wewnątrz `viewbox`, czyli nie są w tym wypadku koordynatami GPS. Przykładowo, źródło danych na ilustracji powyżej ma koordynaty (100,80).
 
 ```
 <svg  xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
