@@ -7,7 +7,7 @@ Podstawowy zakres funkcjonalności platformy Signomix jest dostępny dla wszystk
 - Rejestracja konta i logowanie do aplikacji webowej
 - [Strona startowa](/features/home_page.md)
 - [Pulpity](/features/dashboards/index.md)
-- [Urządzenia](/features/devices/index.md)
+- [Urządzenia (źródła danych)](/features/devices/index.md)
 - [Grupy urządzeń](/features/groups/index.md)
 - [Reguły](/features/rules/index.md)
 - [Alerts](/features/alerts/index.md)

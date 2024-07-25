@@ -11,12 +11,12 @@
 - [Funkcjonalności](/features/index.md)
     - [Rodzaje kont](/features/account_types.md)
     - Rejestracja konta i logowanie do aplikacji webowej
-    - Strona startowa
+    - [Strona startowa](/features/home_page.md)
     - [Pulpity](/features/dashboards/index.md)
     - [Urządzenia](/features/devices/index.md)
     - [Grupy urządzeń](/features/groups/index.md)
     - [Reguły](/features/rules/index.md)
-    - [Alerts](/features/alerts/index.md)
+    - [Alerty](/features/alerts/index.md)
     - Wiadomości
     - [Konto użytkownika](/features/account/index.md)
     - [Rejestrowanie danych](/features/data_provisioning.md)
