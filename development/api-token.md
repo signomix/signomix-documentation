@@ -12,7 +12,7 @@ Ten token może być używany do autentykacji zapytań do API Signomiksa zamiast
 
 Przykład zastosowania: pobieranie danych odebranych ze źródła danych
 
-<pre class="boredr shadow p-2  bg-secondary-subtle">
+<pre class="border shadow p-2  bg-light">
 curl -H "Accept: application/json" \
 -H "Authentication: sgx_token" \
 "https://cloud.signomix.com/api/provider/v2/device/01020304/*?query=last%201"
