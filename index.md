@@ -30,13 +30,14 @@
 <div class="col">
 
 - [Poradniki](/howto/index.md)
-- [Informacje dla programistów](/development/index.md)
+- [Programowanie](/development/index.md)
   - [Budowa i uruchamianie Signomiksa lokalnie](/development/getting-started.md)
   - [Funkcje biblioteki procesora danych](/features/devices/data_processor_lib.md)
-- [Rest API](/restapi/index.md)
-  - [Receiver API](/restapi/receiver.md)
-  - [Wysyłanie danych](/restapi/sending-data.md)
-  - [Pobieranie danych](/restapi/downloading-data.md)
+  - [Data Query Language (DQL)](/development/dql.md)
+  - [Rest API](/restapi/index.md)
+    - [Receiver API](/restapi/receiver.md)
+    - [Wysyłanie danych](/restapi/sending-data.md)
+    - [Pobieranie danych](/restapi/downloading-data.md)
 - [Plany rozwoju (mapa drogowa)](https://github.com/orgs/signomix/projects/4)
 - [Słownik pojęć](/dictionary.md)
 
