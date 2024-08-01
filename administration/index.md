@@ -1,4 +1,12 @@
-# Informacje dla administratorów
+# Wersja dla organizacji
+
+Wersja dla organizacji (przedsiębiorstwa, stowarzyszenia, fundacji itp.) oferuje dodatkowe funkcjonalności:
+- zarządzanie kontami użytkowników w ramach organizacji
+- udostępnianie funkcjonalności Signomiksa klientom organizacji
+- zarządzanie kontami klientów
+- definiowanie struktury uprawnień
+
+## Informacje dla administratorów
 
 - [Struktura organizacyjna](/administration/organization_structure.md)
 - [Zarządzanie użytkownikami](/administration/users.md)

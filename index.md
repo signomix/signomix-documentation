@@ -21,9 +21,9 @@
     - [Konto użytkownika](/features/account/index.md)
     - [Rejestrowanie danych](/features/data_provisioning.md)
     - [Pobieranie danych](/features/downloading_data.md)
-    - Predefiniowane raporty
+    - [Predefiniowane raporty](/features/reports/predefined_reports.md)
 - [Wersja dla organizacji](/administration/index.md)
-- [Wersja enterprise](/enterprise/index.md)
+<!-- - [Wersja enterprise](/enterprise/index.md) -->
 - [Regulamin i polityka prywatności](/legal/terms_and_conditions.md)
 
 </div>

@@ -44,7 +44,13 @@ Niniejsza polityka prywatności opisuje, jakie informacje gromadzone są w ramac
 ### 1. Dane osobowe Użytkowników
 
 1. Dane Użytkownika są rejestrowane i przetwarzane jedynie w celu umożliwienia świadczenia Usługi.
-2. W przypadku Użytkownika korzystającego z darmowego rodzaju abonamentu przechowywane dane obejmują: login, imię, nazwisko, adres-email Użytkownika oraz adresy e-mail wykorzystywane do notyfikacji.
+2. W przypadku Użytkownika korzystającego z darmowego rodzaju abonamentu przechowywane dane obejmują: 
+  -login, 
+  - imię, 
+  - nazwisko, 
+  - adres-email Użytkownika, 
+  - adresy e-mail wykorzystywane do notyfikacji,
+  - adres IP z którego Użytkownik łączy się z Usługą
 3. W przypadku Użytkownika korzystającego z płatnych rodzajów abonamentu, przechowywane są dodatkowo dane wymagane do wystawienia dokumentu sprzedaży: adres oraz opcjonalnie NIP.
 4. Dane powiązane z kontami darmowym są przechowywane w trakcie świadczenia Usługi, czyli od momentu zarejestrowania konta użytkownika, do momentu zlikwidowania konta i rezygnacji z Usługi.
 5. Dane zawarte na fakturach są przechowywane przez okres określony odrębnymi przepisami prawa.
@@ -63,9 +69,10 @@ Niniejsza polityka prywatności opisuje, jakie informacje gromadzone są w ramac
 
 ### 2. Dane IoT
 
-1. Usługa przechowuje dane przesyłane do serwisu przez urządzenia IoT zarejestrowane przez Użytkownika.
-2. Usługodawca może przeprowadzać analizę danych IoT pod kątem rozmiaru oraz częstotliwości ich przesyłania. Wspomniana analiza ma na celu wyłącznie zapewnienie prawidłowego działania Usługi oraz optymalizacji jego działania.
-3. Dane IoT nie są przekazywane przez Usługodawcę innym podmiotom.
+1. Usługa przechowuje dane przesyłane do serwisu przez Źródła Danych zarejestrowane przez Użytkownika.
+2. Termin Źródło Danych oznacza dowolny obiekt mogący wysyłać dane so Usługi. W szczególności może to być urządzenie (np. urządzenie IoT) lub oprogramowanie.
+2. Usługodawca może przeprowadzać analizę danych przesyłanych przez Źródła Danych pod kątem rozmiaru oraz częstotliwości ich przesyłania. Wspomniana analiza ma na celu wyłącznie zapewnienie prawidłowego działania Usługi oraz optymalizacji jej działania.
+3. Odebrane dane nie są przekazywane przez Usługodawcę innym podmiotom.
 4. W przypadku, gdy Użytkownik udostępnia publicznie pulpit Usługi, Usługodawca zastrzega sobie prawo do wykorzystania takiego pulpitu oraz prezentowanych na nim danych do reklamowania Usługi.
 
 ### 3. Ciasteczka
