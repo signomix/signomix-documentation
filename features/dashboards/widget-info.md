@@ -9,7 +9,7 @@ Prezentowane dane to:
 - data i godzina ostatniej zarejestrowanej aktywności
 - opis
 
-<img class="border rounded shadow mt-1 mb-3" width="20%" src="/api/file?path=signomix-documentation/features/dashboards/info.png">
+<img src="../../assets/info.png" class="border rounded shadow mt-1 mb-3" width="20%" >
 
 W przypadku wystąpienia błędu podczas pobierania danych, kontrolka wyświetla numer oraz opis błedu.
 

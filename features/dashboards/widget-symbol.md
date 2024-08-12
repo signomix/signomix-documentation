@@ -2,8 +2,8 @@
 
 Kontrolka prezentuje ostatnio zarejestrowaną wartość wybranego pomiaru oraz dobraną dla niego ikonę. Kliknięcie w obrębie kontrolki powoduje wyświetlenie daty i godziny prezentowanego pomiaru oraz identyfikatora źródła danych.
 
-<img class="border rounded shadow mt-1 mb-3" width="30%" src="/api/file?path=signomix-documentation/features/dashboards/symbol.png">
-<img class="border rounded shadow mt-1 mb-3" width="30%" src="/api/file?path=signomix-documentation/features/dashboards/symbol2.png">
+<img src="../../assets/symbol.png" class="border rounded shadow mt-1 mb-3" width="30%">
+<img src="../../assets/symbol2.png" class="border rounded shadow mt-1 mb-3" width="30%">
 
 ## Konfigurowanie
 
@@ -20,6 +20,6 @@ Konfigurując kontrolkę `LED' należy wypełnić pola:
 - **Ikony** - wybranie nazwy ikony innej niż domyślna dla danej nazwy pomiaru
 - **Rola użytkownika**
 
-<img class="border rounded shadow mt-1 mb-3" width="40%" src="/api/file?path=signomix-documentation/features/dashboards/symbol-settings1.png"><br>
+<img src="../../assets/symbol-settings1.png" class="border rounded shadow mt-1 mb-3" width="40%"><br>
 
-<img class="border rounded shadow mt-1 mb-3" width="40%" src="/api/file?path=signomix-documentation/features/dashboards/symbol-settings2.png">
+<img src="../../assets/symbol-settings2.png" class="border rounded shadow mt-1 mb-3" width="40%">

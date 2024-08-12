@@ -7,8 +7,8 @@ Opcja `Development` w menu webaplikacji Signomix umożliwia utworzenie tokena AP
  
 Ten token może być używany do autentykacji zapytań do API Signomiksa zamiast tokena sesyjnego. Zastosowanie tokena API upraszcza tworzenie skryptów lub programów klienckich. W odróżnieniu od tokena sesyjnego, nie ma potrzeby wcześniejszego logowania się do API, pobierania tokena sesyjnego i obsługi błędów powodowanych przez wygaśnięcie sesji.
 
-<img class="border rounded shadow mt-1 mb-3" width="12%" src="/api/file?path=signomix-documentation/development/api-token1.png">
-<img class="border rounded shadow mt-1 mb-3" width="20%" src="/api/file?path=signomix-documentation/development/api-token2.png">
+<img src="../assets/api-token1.png" class="border rounded shadow mt-1 mb-3" width="12%">
+<img src="../assets/api-token2.png" class="border rounded shadow mt-1 mb-3" width="20%">
 
 Przykład zastosowania: pobieranie danych odebranych ze źródła danych
 

@@ -4,7 +4,7 @@ Wyświetla ikonę, której wygląd i kolor są uzależnione od zdefiniowanej reg
 
 Poniższa ilustracja przedstawia wygląd trzech kontrolek LED kolejno dla: braku ostrzeżenia, ostrzeżenia oraz alarmu.
 
-<img class="border rounded shadow mt-1 mb-3" width="30%" src="/api/file?path=signomix-documentation/features/dashboards/led1.png">
+<img src="../../assets/led1.png" class="border rounded shadow mt-1 mb-3" width="30%">
 
 ## Konfigurowanie
 
@@ -15,9 +15,9 @@ Konfigurując kontrolkę `LED' należy wypełnić pola:
 - **Reguła alarmu** - reguła uzależniająca rodzaj ikony oraz jej kolor od ostatniej wartości pomiaru
 - **Ikony** - pozostawienie tego pola pustego powoduje, że zostanie zastosowany domyślny zestaw ikon
 
-<img class="border rounded shadow mt-1 mb-3" width="30%" src="/api/file?path=signomix-documentation/features/dashboards/widget1.png"><br>
+<img src="../../assets/widget1.png" class="border rounded shadow mt-1 mb-3" width="30%"><br>
 
-<img class="border rounded shadow mt-1 mb-3" width="30%" src="/api/file?path=signomix-documentation/features/dashboards/widget2.png">
+<img src="../../assets/widget2.png" class="border rounded shadow mt-1 mb-3" width="30%">
 
 ## Reguła alarmu
 
@@ -55,5 +55,5 @@ Przykład wybranych ikon oraz uzyskany wygląd poniżej.
 bi-arrow-up-square-fill:bi-arrow-right-square-fill:bi-arrow-down-square-fill
 </pre>
 
-<img class="border rounded shadow mt-1 mb-3" width="30%" src="/api/file?path=signomix-documentation/features/dashboards/led2.png">
+<img src="../../assets/led2.png" class="border rounded shadow mt-1 mb-3" width="30%">
 

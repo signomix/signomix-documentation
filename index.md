@@ -48,4 +48,4 @@
  1. Dokumentacja Signomiksa jest dostępna w języku polskim. Inne wersje językowe (m. inn. angielska) mogą pojawić się w późniejszym terminie, jeżeli będzie to uzasadnione. Obecnie serwisy tłumaczące teksty są łatwo dostępne (również jako funkcja przeglądarki) więc mam nadzieję, że brak wersji językowych nie stanowi dużego problemu.
  2. Źródła dokumentacji są dostępne w [repozytorium GitHub](https://github.com/signomix/signomix-documentation).
 
-<div class="text-center mt-3"><img src="logo.svg" width="100px"></div>
+<div class="text-center mt-3"><img src="assets/logo.svg" width="100px"></div>
