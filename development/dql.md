@@ -7,7 +7,7 @@ Wyrażenie DQL składa się z warunków oraz ich parametrów.
 Ogólnie wyrażenie DQL ma 2 możliwe formy:
 1. Pobranie danych odbieranych od urządzenia
 ```
-[GET] {definicja zakresu danych} [[WHERE] {definicja wyboru}] [[AS] {definicja formatu}] 
+[GET] {definicja zakresu danych} [BY {specyfikacja raportu}] [[WHERE] {definicja wyboru}] [[AS] {definicja formatu}] 
 ```
 2. Pobranie danych zapisywanych przez urządzenie wirtualne. Stosowane w specyficznych przypadkach, zostanie omówione w odrębnym dokumencie.
 ```
@@ -24,7 +24,8 @@ Przy czym:
 - `maximum n [new v]` - pobranie maksymalnej wartości z `n` ostatnich pomiarów, opcjonalnie uwzględniając dodatkową wartość `v`
 - `from {d1} [to {d2}]` - od punktu czasowego zdefiniowanego przez `{d1}`, do punktu czasowego zdefiniowanego przez `{d1}`.
 - `sback n` - uwzględnienie danych zarejestrowanych maksymalnie `n` sekund wcześniej
-- `class classFullName` - nazwa klasy Java implementującej logikę raportu (patrz: [Server Raportów](/features/reports/index.md))
+- `ascending` - sortuj wynik zgodnie z rosnącą datą pomiaru
+- `descending` - sortuj wynik zgodnie z malejącą datą pomiaru
 
 Parametr `sback` jest uwzględniany przy pobieraniu ostatnich pomiarów grupy. Jeśli nie jest podany, to uwzględniane są dane zarejestrowane maksymalnie godzinę wcześniej. Parametr ten umożliwia odrzucenie danych ze źródeł, które nie przesłały danych w ostatnim czasie (np. przestały działać, ale istnieją dane historyczne, które nie powinny być prezentowane w raporcie).
 
@@ -51,17 +52,26 @@ from -0M-UTC
 from -0d-Europe/Warsaw to -0m
 ```
 
+## Specyfikacja raportu
+
+- `report className` - nazwa klasy Java implementującej logikę raportu (patrz: [Server Raportów](/features/reports/index.md))
 
 ## Definicja wyboru
 
-`project nazwa` - pobranie danych otagowanych nazwą projektu równą `nazwa`
-`status n` - pobranie danych dla których urządzenie miało status o wartości równej `n`
+- `project nazwa` - pobranie danych otagowanych nazwą projektu równą `nazwa`
+- `status n` - pobranie danych dla których urządzenie miało status o wartości równej `n`
+- `eui identyfikator` - pobranie danych dotyczących urządzenia o identyfikatorze `identyfikator`
+- `group identyfikator` - pobranie danych dotyczących urządzeń należących do grupy o identyfikatorze `identyfikator`
+- `channel definicja` - pobranie pomiarów o nazwach zawartych w polu `definicja` - nazwy oddzielone przecinkami lub znak `*` oznaczający wszystkie nazwy pomiarów dla danego źródła
+
 
 Przykłady:
 ```
 last 10 project test
 last 10 status 1
 last 10 project test status 1
+last 3 eui 010203040506 channel *
+last 3 eui 010203040506 channel temperature,humidity
 ```
 
 ## Definicja formatu
