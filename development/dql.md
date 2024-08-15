@@ -7,7 +7,7 @@ Wyrażenie DQL składa się z warunków oraz ich parametrów.
 Ogólnie wyrażenie DQL ma 2 możliwe formy:
 1. Pobranie danych odbieranych od urządzenia
 ```
-[GET] {definicja zakresu danych} [BY {specyfikacja raportu}] [[WHERE] {definicja wyboru}] [[AS] {definicja formatu}] 
+[GET] {definicja zakresu danych} [{specyfikacja raportu}] [[WHERE] {definicja wyboru}] [[AS] {definicja formatu}] 
 ```
 2. Pobranie danych zapisywanych przez urządzenie wirtualne. Stosowane w specyficznych przypadkach, zostanie omówione w odrębnym dokumencie.
 ```
@@ -54,7 +54,7 @@ from -0d-Europe/Warsaw to -0m
 
 ## Specyfikacja raportu
 
-- `report className` - nazwa klasy Java implementującej logikę raportu (patrz: [Server Raportów](/features/reports/index.md))
+- `report className` - gdzie `className` to nazwa klasy Java implementującej logikę raportu (patrz: [Server Raportów](/features/reports/index.md))
 
 ## Definicja wyboru
 
