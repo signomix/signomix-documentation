@@ -45,7 +45,7 @@ Niniejsza polityka prywatności opisuje, jakie informacje gromadzone są w ramac
 
 1. Dane Użytkownika są rejestrowane i przetwarzane jedynie w celu umożliwienia świadczenia Usługi.
 2. W przypadku Użytkownika korzystającego z darmowego rodzaju abonamentu przechowywane dane obejmują: 
-  -login, 
+  - login, 
   - imię, 
   - nazwisko, 
   - adres-email Użytkownika, 

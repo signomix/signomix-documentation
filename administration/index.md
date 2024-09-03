@@ -13,4 +13,5 @@ Wersja dla organizacji (przedsiębiorstwa, stowarzyszenia, fundacji itp.) oferuj
 - [Urządzenia](/administration/devices.md)
 - [Reguły monitorowania danych](/administration/rules.md)
 - [Zasady kierowania powiadomień](/administration/notifcation_config.md)
-- [Serwer raportów](/administration/report_server.md)
+- [Serwer raportów](/features/reports/index.md)
+- [Mailing](/administration/mailing.md)

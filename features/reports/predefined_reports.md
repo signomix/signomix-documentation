@@ -17,3 +17,7 @@ Przykład pobierający dane 10 ostatnich logowań:
 last 10 report UserLoginReport
 ```
 
+## Raport DQL
+
+Dostarcza danych pomiarowych na podstawie specyfikacji opisaną ze składnią DQL.
+

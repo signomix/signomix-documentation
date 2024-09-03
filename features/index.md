@@ -15,7 +15,7 @@ Podstawowy zakres funkcjonalności platformy Signomix jest dostępny dla wszystk
 - [Konto użytkownika](/features/account/index.md)
 - [Rejestrowanie danych](/features/data_provisioning.md)
 - [Pobieranie danych](/features/downloading_data.md)
-- Predefiniowane raporty
+- [Predefiniowane raporty](/features/reports/predefined_reports.md)
 
 ## Organizacje
 
@@ -33,3 +33,13 @@ na podstawie indywidualnie zawartej umowy.
 - Dedykowana subdomena (opcja)
 - Użycie własnej domeny (opcja)
 - Dedykowana infrastruktura (opcja)
+
+Więcej informacji na [stronie wersji enterprise](/enterprise/index.md)
+
+## Administracja
+
+- Raporty dla administratora
+- [Mailing](/administration/mailing.md)
+- Zarządzanie użytkownikami
+
+Wszystkie informacje na [stronie funkcjonalności administratora](/administration/index.md)
