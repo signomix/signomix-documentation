@@ -7,7 +7,7 @@ Wyrażenie DQL składa się z warunków oraz ich parametrów.
 Ogólnie wyrażenie DQL ma 2 możliwe formy:
 1. Pobranie danych odbieranych od urządzenia
 ```
-[GET] {definicja zakresu danych} [{specyfikacja raportu}] [[WHERE] {definicja wyboru}] [[AS] {definicja formatu}] 
+[USING] [{specyfikacja raportu}] [GET] {definicja zakresu danych} [[WHERE] {definicja wyboru}] [[AS] {definicja formatu}] 
 ```
 2. Pobranie danych zapisywanych przez urządzenie wirtualne. Stosowane w specyficznych przypadkach, zostanie omówione w odrębnym dokumencie.
 ```
@@ -63,6 +63,7 @@ from -0d-Europe/Warsaw to -0m
 - `eui identyfikator` - pobranie danych dotyczących urządzenia o identyfikatorze `identyfikator`
 - `group identyfikator` - pobranie danych dotyczących urządzeń należących do grupy o identyfikatorze `identyfikator`
 - `channel definicja` - pobranie pomiarów o nazwach zawartych w polu `definicja` - nazwy oddzielone przecinkami lub znak `*` oznaczający wszystkie nazwy pomiarów dla danego źródła
+- `notnull` - odrzuć rekordy (pomiary z tym samym znacznikiem czasu), które nie mają kompletu wartości (patrz: `channel definicja`)
 
 
 Przykłady:
@@ -74,13 +75,18 @@ last 3 eui 010203040506 channel *
 last 3 eui 010203040506 channel temperature,humidity
 ```
 
-## Definicja formatu
+## Format danych zwracanych przez raporty
+
+Wszystkie raportu zwracają dane jako obiekt JSON.
+
+## Definicja formatu (przestarzałe)
 > Uwaga: Definicja formatu ma zastosowanie jedynie w przypadku pobierania danych urządzenia za pomocą API `/api/iot/device/{eui}?{query}`. Nie jest uwzględniana przez kontrolki pulpitu.
 
 - `timeseries` - zastosowanie uproszczonego formatu JSON
 - `csv.timeseries` - dane w formacie CSV
 
 Przykład danych zwracanych w wyniku zapytania bez definicji formatu:
+
 ```
 last 2
 
@@ -105,6 +111,7 @@ last 2
 ```
 
 Przykład uproszczonego formatu JSON:
+
 ```
 last 2 timeseries
 get last 2 as timeseries
@@ -129,7 +136,9 @@ get last 2 as timeseries
   ]
 ]
 ```
+
 Przykład formatu CSV:
+
 ```
 last 2 csv.timeseries
 
