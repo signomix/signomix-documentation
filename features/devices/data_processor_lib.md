@@ -272,13 +272,16 @@ var sum = sgx.getSum("temperature", 10);
 var newSum = sgx.getSum("temperature", 10, 22);
 ```
 
-## <a name="getlastvalue"></a>`getLastValue(channelName)`
+
+
+## <a name="getlastvalue"></a>`getLastValue(channelName, skipNull)`
 
 Funkcja `getLastValue` służy do uzyskiwania ostatniej wartości dla danego kanału.
 
 ### Parametry
 
 - `channelName` (String): Nazwa kanału.
+- `skipNull` (Boolean): Pomiń wartości `null`. Parametr opcjonalny.
 
 ### Zwraca
 
@@ -290,13 +293,14 @@ Funkcja `getLastValue` służy do uzyskiwania ostatniej wartości dla danego kan
 var lastValue = sgx.getLastValue("temperature");
 ```
 
-## <a name="getlastdata"></a>`getLastData(channelName)`
+## <a name="getlastdata"></a>`getLastData(channelName, skipNull)`
 
 Funkcja `getLastData` służy do uzyskiwania ostatnich danych dla danego kanału.
 
 ### Parametry
 
 - `channelName` (String): Nazwa kanału.
+- `skipNull` (Boolean): Pomiń wartości `null`. Parametr opcjonalny. W przypadku jego braku `skipNull==false`.
 
 ### Zwraca
 
