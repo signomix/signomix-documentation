@@ -14,10 +14,12 @@ Użytkowników indywidualnych, którzy zarejestrowali konta w serwisie cloud.sig
 
 |Parametr| Konto Darmowe | Konto Standard | Konto Premium | Dedykowane |
 |---|:---:|:---:|:---:|:---:|:---:|
-|Liczba zarejestrowanych urządzeń [szt.]|5|20|100| * |
+|Liczba zarejestrowanych urządzeń [szt.]|5|20|50| * |
 |Czas przechowywania danych [dni]|7|30|365| * |
 
 <sup>*</sup> zgodnie z zawartą umową
+
+> **Uwaga:** Wartości podane w powyższej tabeli mogą nie być aktualne. Aktualnie obowiązujące wartości są prezentowane na stronach webaplikacji w dotyczących konta użytkownika.
 
 ## Limity kont dedykowanych
 
