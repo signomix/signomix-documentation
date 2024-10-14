@@ -155,7 +155,7 @@ Funkcja `addNotification` służy do dodawania nowej notyfikacji.
 
 ### Parametry
 
-- `newType` (String): Typ nowej notyfikacji.
+- `newType` (String): Typ nowej notyfikacji. Akceptowane wartości: `info`,`warning`,`alert`.
 - `newMessage` (String): Treść nowej notyfikacji.
 
 ### Zwraca
