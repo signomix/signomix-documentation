@@ -15,3 +15,4 @@ Wersja dla organizacji (przedsiębiorstwa, stowarzyszenia, fundacji itp.) oferuj
 - [Zasady kierowania powiadomień](/administration/notifcation_config.md)
 - [Serwer raportów](/features/reports/index.md)
 - [Mailing](/administration/mailing.md)
+- [Sekrety](/administration/secrets.md)

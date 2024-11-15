@@ -124,6 +124,17 @@ cd signomix
 sh init-dev-environment.sh
 ```
 
+### Zarządzanie sekretami konfiguracji
+
+Niektóre z parametrów konfiguracyjnych nie powinny być przechowywane w publicznie dostępnych repozytoriach. Dotyczy to na przykład loginów, haseł lub tokenów API. Signomix wykorzystuje dwa mechanizmy Docker Compose w celu rozwiązania tego problemu:
+
+- Docker Compose Secrets - https://docs.docker.com/compose/how-tos/use-secrets/
+- atrybut `env_file` Docker Compose - https://docs.docker.com/compose/how-tos/environment-variables/set-environment-variables/#use-the-env_file-attribute
+
+Skrypt `init-dev-environment.sh` kopiuje zestaw plików z ustawieniami do katalogu `.secrets` w katalogu domowym użytkownika (patrz: `init-runtime-environment.sh`).
+
+**Przed uruchomieniem Signomiksa należy przejrzeć zawartość plików w katalogu `~/.secrets` i wymienić ustawienia na własne.**
+   
 ### Budowanie wersji developerskiej
 
 ```shell

@@ -1,3 +1,3 @@
 # documentation
 
-Go to [index.md](index.md) to start.
+Go to [index.md](/pl/index.md) to start.
