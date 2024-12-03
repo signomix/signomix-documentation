@@ -12,8 +12,7 @@ Formularz zmiany ustawień pozwala na zmianę parametrów:
 
 ## Kanały powiadomień
 
-Powiadomienia wysyłane przez Signomix dzielą się na 4 typy, których nazwy sugerują ich przeznaczenie:
-- ogólne - powiadomienia dotyczących platformy, np. komunikatów administratora
+Powiadomienia wysyłane przez Signomix dzielą się na 3 typy, których nazwy sugerują ich przeznaczenie:
 - informacyjne - zwykłe informacje dotyczące działania urządzeń użytkownika lub platformy
 - ostrzegawcze - ostrzeżenia
 - alarmy o wystąpieniu problemów o charakterze krytycznym
@@ -21,7 +20,19 @@ Powiadomienia wysyłane przez Signomix dzielą się na 4 typy, których nazwy s
 Dla każdego z powyższych typów powiadomień można skonfigurować kanał komunikacji, którym Signomix prześle powiadomienie do użytkownika. W każdym przypadku powiadomienia będą dostępne do przeglądania w aplikacji webowej (opcja menu `Powiadomienia`). Użytkownik może wybrać:
 - W aplikacji - powiadomienia będą dostępne wyłącznie w aplikacji webowej,
 - E-mail - powiadomienia zostaną wysłane na podany adres e-mail,
-- Webhook - powiadomienia zostaną wysłane zapytaniem HTTP na podany adres.
+- Webhook - powiadomienia zostaną wysłane zapytaniem HTTP na podany adres,
+- SMS - wiadomość SMS wysyłana na ustalony numer telefonu
+
+### Powiadomienia SMS
+
+Powiadomienia SMS są dostępne dla użytkowników kont płatnych.
+
+Reguły:
+- Domyślnym prefiksem telefonu (jeśli nie został podany) jest "+48".
+- Przy wysyłaniu SMS numer telefonu zostaje zawsze poprzedzony prefiksem.
+- Wysłanie SMS zmniejsza pulę punktów dla usług dodatkowych użytkownika o 2 punkty.
+- Konto płatne ma do dyspozycji pulę 20 punktów na miesiąc, czyli może wysłać w miesiącu 10 wiadomości SMS bez dodatkowych opłat.
+- Zwiększenie puli punktów wymaga odrębnego zakupu.
 
 ### Konfiguracja kanału Webhook
 

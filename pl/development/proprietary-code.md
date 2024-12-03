@@ -40,7 +40,7 @@ import com.signomix.common.proprietary.*;
 
 try{
     AccountTypesIface accountTypes = (AccountTypesIface)ExtensionConfig.getExtension("com.signomix.proprietary.account.AccountTypes");
-    if(null != accountTypes{
+    if(null != accountTypes){
         // use extension instance
     }
 }catch(Exception e){
