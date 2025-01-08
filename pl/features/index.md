@@ -3,19 +3,20 @@
 ## Podstawowe
 Podstawowy zakres funkcjonalności platformy Signomix jest dostępny dla wszystkich konta indywidualnych użytkowników, utworzonych za pomocą formularza rejestracyjnego.
 
-- [Rodzaje kont](/features/account_types.md)
+- [Rodzaje kont](account_types.md)
 - Rejestracja konta i logowanie do aplikacji webowej
-- [Strona startowa](/features/home_page.md)
-- [Pulpity](/features/dashboards/index.md)
-- [Urządzenia (źródła danych)](/features/devices/index.md)
-- [Grupy urządzeń](/features/groups/index.md)
-- [Reguły](/features/rules/index.md)
-- [Alerts](/features/alerts/index.md)
-- [Wiadomości](/features/messages/index.md)
-- [Konto użytkownika](/features/account/index.md)
-- [Rejestrowanie danych](/features/data_provisioning.md)
-- [Pobieranie danych](/features/downloading_data.md)
-- [Predefiniowane raporty](/features/reports/predefined_reports.md)
+- [Strona startowa](home_page.md)
+- [Pulpity](dashboards/index.md)
+- [Urządzenia (źródła danych)](devices/index.md)
+- [Grupy urządzeń](groups/index.md)
+- [Reguły](rules/index.md)
+- [Alerts](alerts/index.md)
+- [Wiadomości](messages/index.md)
+- [Konto użytkownika](account/index.md)
+- [Rejestrowanie danych](data_provisioning.md)
+- [Pobieranie danych](downloading_data.md)
+- [Predefiniowane raporty](reports/predefined_reports.md)
+- [Automatyzacja zadań](tasks/index.md)
 
 ## Organizacje
 
