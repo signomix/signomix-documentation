@@ -541,8 +541,8 @@ Funkcja `distance` służy do obliczania odległości między dwoma punktami geo
 
 - `latitude1` (Number): Szerokość geograficzna punktu 1.
 - `longitude1` (Number): Długość geograficzna punktu 1.
-- `latitude2` (Number): Szerokość geograficzna punktu 2.
-- `longitude2` (Number): Długość geograficzna punktu 2.
+- `latitude2` (Number, opcjonalnie): Szerokość geograficzna punktu 2.
+- `longitude2` (Number, opcjonalnie): Długość geograficzna punktu 2.
 
 ### Zwraca
 
@@ -551,5 +551,12 @@ Funkcja `distance` służy do obliczania odległości między dwoma punktami geo
 ### Przykład użycia
 
 ```javascript
+// odległość pomiędzy dwoma punktami
 var dist = sgx.distance(52.2296756, 21.0122287, 41.8919300, 12.5113300);
+
+// odległość podanego punktu od lokalizacji podanej w konfiguracji urządzenia
+var dist = sgx.distance(41.8919300, 12.5113300);
+
+// odległość przesłanej lokalizacji od lokalizacji podanej w konfiguracji urządzenia
+var dist = sgx.distance( sgx.getValue("latitude"), sgx.getValue("longitude") );
 ```
