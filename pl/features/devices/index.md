@@ -10,6 +10,7 @@ Z uwagi na sposób komunikacji mogą to być:
 - urządzenia lub oprogramowanie przesyłające dane korzystając z protokołu HTTP.
 
 Po odebraniu zapytania przez REST API Signomiks obsługuje je kierując najpierw do dekodera danych, a następnie do procesora danych i zapisuje je do bazy danych.
+- [Funkcje biblioteki procesora danych](data_processor_lib.md)
 
-Zobacz też:
-- [Funkcje biblioteki procesora danych](/features/devices/data_processor_lib.md)
+Signomiks może wykrywać awarie urządzeń powodujące, że dane pomiarowe przestają być rejestrowane.
+- [Powiadamianie o awariach urządzeń](dev-failure-alerts)
