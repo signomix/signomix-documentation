@@ -13,4 +13,4 @@ Po odebraniu zapytania przez REST API Signomiks obsługuje je kierując najpierw
 - [Funkcje biblioteki procesora danych](data_processor_lib.md)
 
 Signomiks może wykrywać awarie urządzeń powodujące, że dane pomiarowe przestają być rejestrowane.
-- [Powiadamianie o awariach urządzeń](dev-failure-alerts)
+- [Powiadamianie o awariach urządzeń](dev-failure-alerts.md)
