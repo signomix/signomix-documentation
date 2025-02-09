@@ -559,9 +559,9 @@ var dist = sgx.distance(52.2296756, 21.0122287, 41.8919300, 12.5113300);
 var dist = sgx.distance(2.2296756, 21.0122287, sgx.getValue("latitude"), sgx.getValue("longitude") );
 ```
 
-## <a name="homeDistance"></a>`distance(latitude, longitude)`
+## <a name="homeDistance"></a>`homeDistance(latitude, longitude)`
 
-Funkcja `distance` służy do obliczania odległości między danym punktem geograficznym,
+Funkcja `homeDistance` służy do obliczania odległości między danym punktem geograficznym,
 a punktem położenia urządzenia zapisanym w jego konfiguracji.
 
 ### Parametry
