@@ -31,6 +31,7 @@ Tworząc kod dla procesora użytkownik może wykorzystać funkcje biblioteki `sg
 - [reverseHex](#reversehex)
 - [swap32](#swap32)
 - [distance](#distance)
+- [homeDistance](#homeDistance)
 
 ## <a name="verify"></a>`verify(received, receivedStatus)`
 
@@ -541,12 +542,12 @@ Funkcja `distance` służy do obliczania odległości między dwoma punktami geo
 
 - `latitude1` (Number): Szerokość geograficzna punktu 1.
 - `longitude1` (Number): Długość geograficzna punktu 1.
-- `latitude2` (Number, opcjonalnie): Szerokość geograficzna punktu 2.
-- `longitude2` (Number, opcjonalnie): Długość geograficzna punktu 2.
+- `latitude2` (Number): Szerokość geograficzna punktu 2.
+- `longitude2` (Number): Długość geograficzna punktu 2.
 
 ### Zwraca
 
-- `Number`: Odległość między dwoma punktami w kilometrach.
+- `Number`: Odległość między dwoma punktami w metrach.
 
 ### Przykład użycia
 
@@ -554,9 +555,31 @@ Funkcja `distance` służy do obliczania odległości między dwoma punktami geo
 // odległość pomiędzy dwoma punktami
 var dist = sgx.distance(52.2296756, 21.0122287, 41.8919300, 12.5113300);
 
+// odległość punktu od przesłanej lokalizacji
+var dist = sgx.distance(2.2296756, 21.0122287, sgx.getValue("latitude"), sgx.getValue("longitude") );
+```
+
+## <a name="homeDistance"></a>`distance(latitude, longitude)`
+
+Funkcja `distance` służy do obliczania odległości między danym punktem geograficznym,
+a punktem położenia urządzenia zapisanym w jego konfiguracji.
+
+### Parametry
+
+- `latitude` (Number): Szerokość geograficzna punktu.
+- `longitude` (Number): Długość geograficzna punktu.
+
+
+### Zwraca
+
+- `Number`: Odległość między dwoma punktami w metrach.
+
+### Przykład użycia
+
+```javascript
 // odległość podanego punktu od lokalizacji podanej w konfiguracji urządzenia
-var dist = sgx.distance(41.8919300, 12.5113300);
+var dist = sgx.homeDistance(41.8919300, 12.5113300);
 
 // odległość przesłanej lokalizacji od lokalizacji podanej w konfiguracji urządzenia
-var dist = sgx.distance( sgx.getValue("latitude"), sgx.getValue("longitude") );
+var dist = sgx.homeDistance( sgx.getValue("latitude"), sgx.getValue("longitude") );
 ```
