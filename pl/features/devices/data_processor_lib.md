@@ -32,6 +32,8 @@ Tworząc kod dla procesora użytkownik może wykorzystać funkcje biblioteki `sg
 - [swap32](#swap32)
 - [distance](#distance)
 - [homeDistance](#homeDistance)
+- [getDeviceGroups](#getDeviceGroups)
+- [addGroupData](#addGroupData)
 
 ## <a name="verify"></a>`verify(received, receivedStatus)`
 

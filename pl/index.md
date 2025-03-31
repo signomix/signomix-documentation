@@ -31,7 +31,7 @@
 </div>
 <div class="col">
 
-- [Poradniki](howto/index.md)
+- [Poradniki (FAQ)](howto/index.md)
 - [Programowanie](development/index.md)
   - [Budowa i uruchamianie Signomiksa lokalnie](development/getting-started.md)
   - [Funkcje biblioteki procesora danych](features/devices/data_processor_lib.md)
