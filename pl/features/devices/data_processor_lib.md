@@ -9,11 +9,15 @@ Tworząc kod dla procesora użytkownik może wykorzystać funkcje biblioteki `sg
 - [verify](#verify)
 - [accept](#accept)
 - [addCommand](#addcommand)
-- [addPlainCommand](#addplaincommand)
+- [addGroupData](#addGroupData)
 - [addHexCommand](#addhexcommand)
 - [addNotification](#addnotification)
+- [addPlainCommand](#addplaincommand)
 - [addVirtualData](#addvirtualdata)
+- [clearData](#cleardata)
+- [distance](#distance)
 - [getAverage](#getaverage)
+- [getDeviceGroups](#getDeviceGroups)
 - [getMinimum](#getminimum)
 - [getMaximum](#getmaximum)
 - [getSum](#getsum)
@@ -25,15 +29,12 @@ Tworząc kod dla procesora użytkownik może wykorzystać funkcje biblioteki `sg
 - [getTimestampUTC](#gettimestamputc)
 - [getValue](#getvalue)
 - [getStringValue](#getstringvalue)
+- [homeDistance](#homeDistance)
 - [put](#put)
 - [setState](#setstate)
 - [setStatus](#setstatus)
-- [reverseHex](#reversehex)
 - [swap32](#swap32)
-- [distance](#distance)
-- [homeDistance](#homeDistance)
-- [getDeviceGroups](#getDeviceGroups)
-- [addGroupData](#addGroupData)
+- [reverseHex](#reversehex)
 
 ## <a name="verify"></a>`verify(received, receivedStatus)`
 
@@ -190,6 +191,18 @@ Funkcja `addVirtualData` służy do dodawania nowych danych wirtualnych.
 ```javascript
 sgx.addVirtualData("00124B0004F67890", "virtualTemperature", 25);
 ```
+
+## <a name="cleardata"></a>`clearData()`
+
+Funkcja `clearData` usuwa z kolejki wszystkie odebrane wartości. 
+
+### Parametry
+
+Brak
+
+### Zwraca
+
+- `void`: Funkcja nie zwraca żadnej wartości.
 
 ## <a name="getaverage"></a>`getAverage(channelName, scope, newValue)`
 
