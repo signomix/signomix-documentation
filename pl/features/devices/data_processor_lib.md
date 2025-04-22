@@ -1,11 +1,24 @@
-## Spis treści
+# Spis treści
 
 Definicja źródła danych (urządzenia) w Signomiksie umożliwia zdefiniowanie kodu dla procesora danych. W momencie odebrania nowych danych z tego źródła, procesor danych uruchamia interpreter języka JavaScript i wykonuje kod zdefiniowany dla tego źródła danych.
 
 Tworząc kod dla procesora użytkownik może wykorzystać funkcje biblioteki `sgx` wbudowanej w procesor danych. Poniżej dokumentacja tej biblioteki.
 
 <!-- TODO zmienne biblioteki -->
+Zmienne:<br>
+- [eui](#eui)
+- [dataTimestamp](#datatimestamp)
+- [applicationConfig](#applicationconfig)
+- [deviceConfig](#deviceconfig)
+- [deviceGroups](#devicegroups)
+- [latitude](#latitude)
+- [longitude](#longitude)
+- [altitude](#altitude)
+- [tags](#tags)
+- [port](#port)
 
+
+Funkcje:<br>
 - [verify](#verify)
 - [accept](#accept)
 - [addCommand](#addcommand)
@@ -36,20 +49,77 @@ Tworząc kod dla procesora użytkownik może wykorzystać funkcje biblioteki `sg
 - [swap32](#swap32)
 - [reverseHex](#reversehex)
 
-## <a name="verify"></a>`verify(received, receivedStatus)`
+## Zmienne biblioteki `sgx`
+
+W momencie inicjowania procesora danych zmiennym biblioteki `sgx` są przypisywane wartości odczytywane z danych przychodzących. W skrypcie procesora danych można odczytać wartości tych zmiennych w sposób taki jak dla zmiennej `eui` poniżej.
+
+```javascript
+var eui = sgx.eui
+```
+
+### <a name="eui"></a>`eui`
+
+Identyfikator (EUI) źródła danych
+
+#### Przykład użycia
+
+```javascript
+var eui = sgx.eui
+```
+
+### <a name="datatimestamp"></a>`dataTimestamp`
+
+Znacznik czasowy odebrania danych w milisekundach (UTC).
+
+### <a name="applicationconfig"></a>`applicationConfig`
+
+Obiekt konfiguracji aplikacji zadeklarowanej dla źródła danych.
+
+### <a name="deviceconfig"></a>`deviceConfig`
+
+Obiekt konfiguracji zdefiniowanej dla źródła danych. 
+
+### <a name="devicegroups"></a>`deviceGroups`
+
+Grupy, z którymi jest powiązane źródło danych.
+
+### <a name="latitude"></a>`latitude`
+
+Szerokość geograficzna źródła danych, podana w jego definicji (format dziesiętny, jak w mapach Google).
+
+### <a name="longitude"></a>`longitude`
+
+Długość geograficzna źródła danych, podana w jego definicji (format dziesiętny, jak w mapach Google).
+
+### <a name="altitude"></a>`altitude`
+
+Wysokość nad poziomem morza źródła danych, podana w jego definicji.
+
+### <a name="tags"></a>`tags`
+
+Mapa tagów dodanych definicji źródła danych.
+
+### <a name="port"></a>`port`
+
+Numer portu LoRaWAN, przypisanego do transmisji danych.
+
+
+## Funkcje obiektu `sgx`
+
+### <a name="verify"></a>`verify(received, receivedStatus)`
 
 Funkcja `verify` służy do weryfikacji otrzymanych danych i aktualizacji stanu obiektu.
 
-### Parametry
+#### Parametry
 
 - `received` (Array): Tablica obiektów danych do weryfikacji.
 - `receivedStatus` (String): Status otrzymanych danych.
 
-### Zwraca
+#### Zwraca
 
 - `void`: Funkcja nie zwraca żadnej wartości.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 var receivedData = [
@@ -61,41 +131,41 @@ var status = "ok";
 sgx.verify(receivedData, status);
 ```
 
-## <a name="accept"></a>`accept(name)`
+### <a name="accept"></a>`accept(name)`
 
 Funkcja `accept` służy do zaakceptowania danych o podanej nazwie i zapisania ich w wynikach. Jej wywołanie może być konieczne w przypadku użycia w kodzie funkcji `put`.
 
 Patrz też: [put](#put)
 
-### Parametry
+#### Parametry
 
 - `name` (String): Nazwa danych do zaakceptowania.
 
-### Zwraca
+#### Zwraca
 
 - `void`: Funkcja nie zwraca żadnej wartości.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 sgx.accept("temperature");
 ```
 
-## <a name="addcommand"></a>`addCommand(targetEUI, payload, overwrite)`
+### <a name="addcommand"></a>`addCommand(targetEUI, payload, overwrite)`
 
 Funkcja `addCommand` służy do dodawania nowej komendy.
 
-### Parametry
+#### Parametry
 
 - `targetEUI` (String): Unikalny identyfikator docelowego urządzenia.
 - `payload` (Object): Dane (obiekt JavaScript), które mają być wysłane jako część komendy.
 - `overwrite` (Boolean): Flaga wskazująca, czy unieważnić wcześniejsze (jeszcze nie przekazane) komendy..
 
-### Zwraca
+#### Zwraca
 
 - `void`: Funkcja nie zwraca żadnej wartości.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 var targetEUI = "00124B0004F12345";
@@ -105,21 +175,21 @@ var overwrite = true;
 sgx.addCommand(targetEUI, payload, overwrite);
 ```
 
-## <a name="addplaincommand"></a>`addPlainCommand(targetEUI, payload, overwrite)`
+### <a name="addplaincommand"></a>`addPlainCommand(targetEUI, payload, overwrite)`
 
 Funkcja `addPlainCommand` służy do dodawania nowej komendy w formacie zwykłego tekstu.
 
-### Parametry
+#### Parametry
 
 - `targetEUI` (String): Unikalny identyfikator docelowego urządzenia.
 - `payload` (String): Tekst, który ma być wysłany jako część komendy.
 - `overwrite` (Boolean): Flaga wskazująca, czy unieważnić wcześniejsze (jeszcze nie przekazane) komendy..
 
-### Zwraca
+#### Zwraca
 
 - `void`: Funkcja nie zwraca żadnej wartości.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 var targetEUI = "00124B0004F12345";
@@ -129,21 +199,21 @@ var overwrite = false;
 sgx.addPlainCommand(targetEUI, payload, overwrite);
 ```
 
-## <a name="addhexcommand"></a>`addHexCommand(targetEUI, payload, overwrite)`
+### <a name="addhexcommand"></a>`addHexCommand(targetEUI, payload, overwrite)`
 
 Funkcja `addHexCommand` służy do dodawania nowej komendy z ładunkiem w formacie szesnastkowym.
 
-### Parametry
+#### Parametry
 
 - `targetEUI` (String): Unikalny identyfikator docelowego urządzenia.
 - `payload` (String): Dane w formacie szesnastkowym, które mają być wysłane jako część komendy.
 - `overwrite` (Boolean): Flaga wskazująca, czy unieważnić wcześniejsze (jeszcze nie przekazane) komendy..
 
-### Zwraca
+#### Zwraca
 
 - `void`: Funkcja nie zwraca żadnej wartości.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 var targetEUI = "00124B0004F12345";
@@ -153,135 +223,135 @@ var overwrite = true;
 sgx.addHexCommand(targetEUI, payload, overwrite);
 ```
 
-## <a name="addnotification"></a>`addNotification(newType, newMessage)`
+### <a name="addnotification"></a>`addNotification(newType, newMessage)`
 
 Funkcja `addNotification` służy do dodawania nowej notyfikacji.
 
-### Parametry
+#### Parametry
 
 - `newType` (String): Typ nowej notyfikacji. Akceptowane wartości: `info`,`warning`,`alert`.
 - `newMessage` (String): Treść nowej notyfikacji.
 
-### Zwraca
+#### Zwraca
 
 - `void`: Funkcja nie zwraca żadnej wartości.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 sgx.addNotification("info", "Device activated successfully.");
 ```
 
-## <a name="addvirtualdata"></a>`addVirtualData(newEUI, newName, newValue)`
+### <a name="addvirtualdata"></a>`addVirtualData(newEUI, newName, newValue)`
 
 Funkcja `addVirtualData` służy do dodawania nowych danych wirtualnych.
 
-### Parametry
+#### Parametry
 
 - `newEUI` (String): Unikalny identyfikator nowego urządzenia.
 - `newName` (String): Nazwa nowych danych.
 - `newValue` (Mixed): Wartość nowych danych.
 
-### Zwraca
+#### Zwraca
 
 - `void`: Funkcja nie zwraca żadnej wartości.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 sgx.addVirtualData("00124B0004F67890", "virtualTemperature", 25);
 ```
 
-## <a name="cleardata"></a>`clearData()`
+### <a name="cleardata"></a>`clearData()`
 
 Funkcja `clearData` usuwa z kolejki wszystkie odebrane wartości. 
 
-### Parametry
+#### Parametry
 
 Brak
 
-### Zwraca
+#### Zwraca
 
 - `void`: Funkcja nie zwraca żadnej wartości.
 
-## <a name="getaverage"></a>`getAverage(channelName, scope, newValue)`
+### <a name="getaverage"></a>`getAverage(channelName, scope, newValue)`
 
 Funkcja `getAverage` służy do uzyskiwania średniej wartości dla danego kanału.
 
-### Parametry
+#### Parametry
 
 - `channelName` (String): Nazwa kanału.
 - `scope` (Number): Zakres wartości.
 - `newValue` (Number, opcjonalnie): Nowa wartość do uwzględnienia w obliczeniach.
 
-### Zwraca
+#### Zwraca
 
 - `Number`: Średnia wartość dla danego kanału.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 var average = sgx.getAverage("temperature", 10);
 var newAverage = sgx.getAverage("temperature", 10, 23.0);
 ```
 
-## <a name="getminimum"></a>`getMinimum(channelName, scope, newValue)`
+### <a name="getminimum"></a>`getMinimum(channelName, scope, newValue)`
 
 Funkcja `getMinimum` służy do uzyskiwania minimalnej wartości dla danego kanału.
 
-### Parametry
+#### Parametry
 
 - `channelName` (String): Nazwa kanału.
 - `scope` (Number): Zakres wartości.
 - `newValue` (Number, opcjonalnie): Nowa wartość do uwzględnienia w obliczeniach.
 
-### Zwraca
+#### Zwraca
 
 - `Number`: Minimalna wartość dla danego kanału.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 var minimum = sgx.getMinimum("temperature", 10);
 var newMinimum = sgx.getMinimum("temperature", 10, 18);
 ```
 
-## <a name="getmaximum"></a>`getMaximum(channelName, scope, newValue)`
+### <a name="getmaximum"></a>`getMaximum(channelName, scope, newValue)`
 
 Funkcja `getMaximum` służy do uzyskiwania maksymalnej wartości dla danego kanału.
 
-### Parametry
+#### Parametry
 
 - `channelName` (String): Nazwa kanału.
 - `scope` (Number): Zakres wartości.
 - `newValue` (Number, opcjonalnie): Nowa wartość do uwzględnienia w obliczeniach.
 
-### Zwraca
+#### Zwraca
 
 - `Number`: Maksymalna wartość dla danego kanału.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 var maximum = sgx.getMaximum("temperature", 10);
 var newMaximum = sgx.getMaximum("temperature", 10, 27);
 ```
 
-## <a name="getsum"></a>`getSum(channelName, scope, newValue)`
+### <a name="getsum"></a>`getSum(channelName, scope, newValue)`
 
 Funkcja `getSum` służy do uzyskiwania sumy wartości dla danego kanału.
 
-### Parametry
+#### Parametry
 
 - `channelName` (String): Nazwa kanału.
 - `scope` (Number): Zakres wartości.
 - `newValue` (Number, opcjonalnie): Nowa wartość do uwzględnienia w obliczeniach.
 
-### Zwraca
+#### Zwraca
 
 - `Number`: Suma wartości dla danego kanału.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 var sum = sgx.getSum("temperature", 10);
@@ -290,100 +360,100 @@ var newSum = sgx.getSum("temperature", 10, 22);
 
 
 
-## <a name="getlastvalue"></a>`getLastValue(channelName, skipNull)`
+### <a name="getlastvalue"></a>`getLastValue(channelName, skipNull)`
 
 Funkcja `getLastValue` służy do uzyskiwania ostatniej wartości dla danego kanału.
 
-### Parametry
+#### Parametry
 
 - `channelName` (String): Nazwa kanału.
 - `skipNull` (Boolean): Pomiń wartości `null`. Parametr opcjonalny.
 
-### Zwraca
+#### Zwraca
 
 - `Mixed`: Ostatnia wartość dla danego kanału lub `null`, jeśli brak danych.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 var lastValue = sgx.getLastValue("temperature");
 ```
 
-## <a name="getlastdata"></a>`getLastData(channelName, skipNull)`
+### <a name="getlastdata"></a>`getLastData(channelName, skipNull)`
 
 Funkcja `getLastData` służy do uzyskiwania ostatnich danych dla danego kanału.
 
-### Parametry
+#### Parametry
 
 - `channelName` (String): Nazwa kanału.
 - `skipNull` (Boolean): Pomiń wartości `null`. Parametr opcjonalny. W przypadku jego braku `skipNull==false`.
 
-### Zwraca
+#### Zwraca
 
 - `Object`: Ostatnie dane dla danego kanału.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 var lastData = sgx.getLastData("temperature");
 ```
 
-## <a name="getmodulo"></a>`getModulo(value, divider)`
+### <a name="getmodulo"></a>`getModulo(value, divider)`
 
 Funkcja `getModulo` służy do uzyskiwania reszty z dzielenia wartości przez dzielnik.
 
-### Parametry
+#### Parametry
 
 - `value` (Number): Wartość do podzielenia.
 - `divider` (Number): Dzielnik.
 
-### Zwraca
+#### Zwraca
 
 - `Number`: Reszta z dzielenia.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 var modulo = sgx.getModulo(10, 3); // 1
 ```
 
-## <a name="getoutput"></a>`getOutput()`
+### <a name="getoutput"></a>`getOutput()`
 
 Funkcja `getOutput` służy do uzyskiwania wyników przetwarzania.
 
-### Zwraca
+#### Zwraca
 
 - `Mixed`: Wynik przetwarzania.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 var output = sgx.getOutput();
 ```
 
-## <a name="gettimestamp"></a>`getTimestamp(channelName)`
+### <a name="gettimestamp"></a>`getTimestamp(channelName)`
 
 Funkcja `getTimestamp` służy do uzyskiwania znacznika czasu dla danego kanału.
 
-### Parametry
+#### Parametry
 
 - `channelName` (String): Nazwa kanału.
 
-### Zwraca
+#### Zwraca
 
 - `Number`: Znacznik czasu dla danego kanału.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 var timestamp = sgx.getTimestamp("temperature");
 ```
 
-## <a name="gettimestamputc"></a>`getTimestampUTC(y, m, d, h, min, s)`
+### <a name="gettimestamputc"></a>`getTimestampUTC(y, m, d, h, min, s)`
 
 Funkcja `getTimestampUTC` służy do uzyskiwania znacznika czasu UTC na podstawie podanych parametrów.
 
-### Parametry
+#### Parametry
 
 - `y` (Number): Rok.
 - `m` (Number): Miesiąc.
@@ -392,79 +462,79 @@ Funkcja `getTimestampUTC` służy do uzyskiwania znacznika czasu UTC na podstawi
 - `min` (Number): Minuta.
 - `s` (Number): Sekunda.
 
-### Zwraca
+#### Zwraca
 
 - `Number`: Znacznik czasu UTC.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 var timestampUTC = sgx.getTimestampUTC(2024, 6, 5, 12, 0, 0);
 ```
 
-## <a name="getvalue"></a>`getValue(channelName)`
+### <a name="getvalue"></a>`getValue(channelName)`
 
 Funkcja `getValue` służy do uzyskiwania wartości dla danego kanału.
 
-### Parametry
+#### Parametry
 
 - `channelName` (String): Nazwa kanału.
 
-### Zwraca
+#### Zwraca
 
 - `Mixed`: Wartość dla danego kanału lub `null`, jeśli brak danych.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 var value = sgx.getValue("temperature");
 ```
 
-## <a name="getstringvalue"></a>`getStringValue(channelName)`
+### <a name="getstringvalue"></a>`getStringValue(channelName)`
 
 Funkcja `getStringValue` służy do uzyskiwania wartości tekstowej dla danego kanału.
 
-### Parametry
+#### Parametry
 
 - `channelName` (String): Nazwa kanału.
 
-### Zwraca
+#### Zwraca
 
 - `String`: Wartość tekstowa dla danego kanału lub `null`, jeśli brak danych.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 var stringValue = sgx.getStringValue("temperature");
 ```
 
-## <a name="put"></a>`put(name, newValue, timestamp)`
+### <a name="put"></a>`put(name, newValue, timestamp)`
 
 Funkcja `put` służy do umieszczania nowych danych.
 
-### Parametry
+#### Parametry
 
 - `name` (String): Nazwa danych.
 - `newValue` (Mixed): Nowa wartość danych.
 - `timestamp` (Number, opcjonalnie): Znacznik czasu danych.
 
-### Zwraca
+#### Zwraca
 
 - `void`: Funkcja nie zwraca żadnej wartości.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 sgx.put("temperature", 23.5);
 sgx.put("temperature", 23.5, 1628765432);
 ```
 
-### Uwagi
+#### Uwagi
 
 Użycie funkcji `put` wyłącza mechanizm automatycznego akceptowania i zapisywania w bazie odebranych danych. Jeśli w kodzie procesora danych zostanie użyta funkcja `put` to w bazie 
 zostaną zarejestrowane jedynie dane przekazane w funkcjach `put` oraz `accept`.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 // Signomix odebrał request z danymi o nazwach `temperature` i `humidity`, jednak w skrypcie 
@@ -477,94 +547,94 @@ sgx.accept("humidity")
 
 Patrz też: [accept](#accept)
 
-## <a name="setstate"></a>`setState(newState)`
+### <a name="setstate"></a>`setState(newState)`
 
 Funkcja `setState` służy do ustawiania nowego stanu urządzenia.
 
-### Parametry
+#### Parametry
 
 - `newState` (String): Nowy stan urządzenia.
 
-### Zwraca
+#### Zwraca
 
 - `void`: Funkcja nie zwraca żadnej wartości.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 sgx.setState("active");
 ```
 
-## <a name="setstatus"></a>`setStatus(newStatus)`
+### <a name="setstatus"></a>`setStatus(newStatus)`
 
 Funkcja `setStatus` służy do ustawiania nowego statusu urządzenia.
 
-### Parametry
+#### Parametry
 
 - `newStatus` (String): Nowy status urządzenia.
 
-### Zwraca
+#### Zwraca
 
 - `void`: Funkcja nie zwraca żadnej wartości.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 sgx.setStatus("offline");
 ```
 
-## <a name="reversehex"></a>`reverseHex(hexStr)`
+### <a name="reversehex"></a>`reverseHex(hexStr)`
 
 Funkcja `reverseHex` służy do odwracania kolejności znaków w łańcuchu szesnastkowym.
 
-### Parametry
+#### Parametry
 
 - `hexStr` (String): Łańcuch szesnastkowy.
 
-### Zwraca
+#### Zwraca
 
 - `String`: Odwrócony łańcuch szesnastkowy.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 var reversedHex = sgx.reverseHex("00FFAA01"); // "01AAFF00"
 ```
 
-## <a name="swap32"></a>`swap32(val)`
+### <a name="swap32"></a>`swap32(val)`
 
 Funkcja `swap32` służy do zmiany kolejności bajtów w liczbie 32-bitowej.
 
-### Parametry
+#### Parametry
 
 - `val` (Number): Liczba 32-bitowa.
 
-### Zwraca
+#### Zwraca
 
 - `Number`: Liczba z zmienioną kolejnością bajtów.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 var swapped = sgx.swap32(0x12345678); // 0x78563412
 ```
 
-## <a name="distance"></a>`distance(latitude1, longitude1, latitude2, longitude2)`
+### <a name="distance"></a>`distance(latitude1, longitude1, latitude2, longitude2)`
 
 Funkcja `distance` służy do obliczania odległości między dwoma punktami geograficznymi.
 
-### Parametry
+#### Parametry
 
 - `latitude1` (Number): Szerokość geograficzna punktu 1.
 - `longitude1` (Number): Długość geograficzna punktu 1.
 - `latitude2` (Number): Szerokość geograficzna punktu 2.
 - `longitude2` (Number): Długość geograficzna punktu 2.
 
-### Zwraca
+#### Zwraca
 
 - `Number`: Odległość między dwoma punktami w metrach.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 // odległość pomiędzy dwoma punktami
@@ -574,22 +644,22 @@ var dist = sgx.distance(52.2296756, 21.0122287, 41.8919300, 12.5113300);
 var dist = sgx.distance(2.2296756, 21.0122287, sgx.getValue("latitude"), sgx.getValue("longitude") );
 ```
 
-## <a name="homeDistance"></a>`homeDistance(latitude, longitude)`
+### <a name="homeDistance"></a>`homeDistance(latitude, longitude)`
 
 Funkcja `homeDistance` służy do obliczania odległości między danym punktem geograficznym,
 a punktem położenia urządzenia zapisanym w jego konfiguracji.
 
-### Parametry
+#### Parametry
 
 - `latitude` (Number): Szerokość geograficzna punktu.
 - `longitude` (Number): Długość geograficzna punktu.
 
 
-### Zwraca
+#### Zwraca
 
 - `Number`: Odległość między dwoma punktami w metrach.
 
-### Przykład użycia
+#### Przykład użycia
 
 ```javascript
 // odległość podanego punktu od lokalizacji podanej w konfiguracji urządzenia
