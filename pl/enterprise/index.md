@@ -1,5 +1,8 @@
 # Wersja "Enterprise"
 
-- [Organizacje](/enterprise/organizations.md)
-- [Aplikacje](/enterprise/applications.md)
-- [Serwer raportów](/administration/report_server.md)
+- [Organizacje](organizations.md)
+- [Aplikacje](applications.md)
+- [Zadania](tasks.md)
+- [Pomoc](help.md)
+- [White labelling](white_labelling.md)
+- [Blokowanie konfiguracji](locking.md)

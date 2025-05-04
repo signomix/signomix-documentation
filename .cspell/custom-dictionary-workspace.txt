@@ -1,0 +1,6 @@
+# Custom Dictionary Words
+HCMS
+Signomiksa
+Signomix
+Webaplikacja
+webaplikacji
