@@ -8,6 +8,7 @@ Jeżeli źródło danych przesyła koordynaty używając innych nazw pomiarów n
 
 ```json
 {
-    
+"latitudeName": "gps_lat",
+"longitudeName":"gps_lon"
 }
 ```

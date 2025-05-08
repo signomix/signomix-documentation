@@ -10,5 +10,16 @@
 
 Przykładowa definicja zakresu danych:
 ```
-report DqlReport group myGroupEui channel latitude,longitude,pm2_5avg,pm10avg,temperature,humidity,pressure last 1
+report DqlReport group myGroupEui channel gps_lat,gps_lon,pm2_5avg,pm10avg,temperature,humidity,pressure last 1
+```
+
+## Konfiguracja nazw koordynat
+
+Jeżeli źródło danych przesyła koordynaty używając innych nazw pomiarów niż `latitude` i `longitude`, to konieczne jest dodanie do definicji kontrolki konfiguracji tych nazw. Poniżej przykład:
+
+```json
+{
+"latitudeName": "gps_lat",
+"longitudeName":"gps_lon"
+}
 ```
