@@ -7,6 +7,8 @@ Położenie i rozmiar kontrolek można wygodnie zmieniać z użyciem mechanizmu 
 
 ## Dostępne typy kontrolek
 
+Uwagi ogólne dotyczące konfigurowania kontrolek - [czytaj tutaj!](widgets-config.md)
+
 |Typ|Co przedstawia|
 |---|---|
 |[Karta wartości](widget-symbol.md)|Ostatnia zarejestrowana wartość|
@@ -22,12 +24,12 @@ Położenie i rozmiar kontrolek można wygodnie zmieniać z użyciem mechanizmu 
 |[Informacje o źródle danych](widget-info.md)|Informacje o źródle danych (urządzeniu)|
 |[Trasy grupowe](widget-multitrack)|Mapa z trasami wielu urządzeń|
 |[Wykres](widget-chart.md)|Wykres|
-|[Wykres grupowy](widget-groupchart.md)|Wykres grupowy|
 |[Czas](widget-time.md)|Czasu pomiaru|
 |[Data](widget-date.md)|Data pomiaru|
 |[Stoper](widget-stopwatch.md)|Stoper|
 <!--
 |[Surowe dane](widget-raw.md)|Dane w formacie JSON|
+|[Wykres grupowy](widget-groupchart.md)|Wykres grupowy|
 -->
 
 ## Uprawnienia

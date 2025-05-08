@@ -1,0 +1,2 @@
+# Kontrolka typu `Wykres grupowy`
+

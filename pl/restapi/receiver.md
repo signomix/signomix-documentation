@@ -19,7 +19,7 @@
 
 Niniejsza dokumentacja opisuje REST API dla odbiornika danych IoT. API umożliwia przesyłanie danych w formatach JSON, tekstowym oraz jako formularze, a także umożliwia przesyłanie danych w trybie wsadowym (bulk).
 
-Zobacz też: [Przesyłanie danych](sending_data.md)
+Zobacz też: [Przesyłanie danych](sending-data.md)
 
 ## Dokumentacja REST API Generic
 
