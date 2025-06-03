@@ -23,16 +23,8 @@ Użytkowników indywidualnych, którzy zarejestrowali konta w serwisie cloud.sig
 
 ## Limity kont dedykowanych
 
-Umowa dotycząca obsługi kont dedykowanych w ramach organizacji umożliwia utworzenie wielu kont i zarządzanie przez użytkownika. Jest to opisane w części dotyczącej funkcjonalności dla organizacji.
+Umowa dotycząca obsługi kont dedykowanych w ramach organizacji umożliwia utworzenie wielu kont i zarządzanie nimi przez administratora. Jest to opisane w części dotyczącej funkcjonalności dla organizacji.
 
 Limity dla kont użytkowników zarejestrowanych w ramach organizacji są określone w odrębnej umowie. Umowa ta może  określać maksymalną liczbę urządzeń oraz czas przechowywania danych.
 
 Liczba urządzeń jest liczona dla całej organizacji, a nie dla jej poszczególnych użytkowników.
-
-<style>
-    table, th, td {
-        border: 1px solid black;
-        padding-left:1rem;
-        padding-right: 1rem;
-    }
-</style>

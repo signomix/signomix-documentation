@@ -1,9 +1,11 @@
 # White labelling
 
+<span class="badge bg-primary">Funkcjonalność dostępna dla organizacji</span>
+
 Webaplikacja Signomix umożliwia dostosowanie wyglądu memu do wymagań organizacji poprzez zdefiniowanie:
-- nazwy organizacji wyświetlanej na górnej belce webaplikacji
-- kolorów tła i tekstu dla górnej belki webaplikacji
-- adresu url wyświetlanego logo
+- nazwy organizacji wyświetlanej na górnej belce webaplikacji,
+- kolorów tła i tekstu dla górnej belki webaplikacji,
+- adresu url wyświetlanego logo.
 
 Dodatkowo administrator może określić czy w menu pojawią się opcje:
 - odnośnik do dokumentacji ogólnej Signomiksa,

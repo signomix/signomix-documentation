@@ -1,5 +1,7 @@
 # Aplikacje
 
+<span class="badge bg-primary">Funkcjonalność dostępna dla organizacji</span>
+
 Aplikacja składa się z definicji:
 - skryptu dekodera danych
 - skryptu procesora danych

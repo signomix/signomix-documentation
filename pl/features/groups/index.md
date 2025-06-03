@@ -20,4 +20,4 @@ przydatne.*
 
 ## Pobieranie danych grupy
 
-Dane przesłane przez urządzenia grupy można pobrać* jako plik w formacie CSV. Zakres pobieranych danych jest ograniczony do 31 dni wstecz od wybranej daty końcowej.
+Dane przesłane przez urządzenia grupy można pobrać jako plik w formacie CSV. Zakres pobieranych danych jest ograniczony do 31 dni wstecz od wybranej daty końcowej.

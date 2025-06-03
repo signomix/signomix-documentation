@@ -14,6 +14,9 @@ Podstawowe funkcjonalności dostępne dla administratorów systemu.
 - [Reguły monitorowania danych](rules.md)
 - [Zasady kierowania powiadomień](/administration/notifcation_config.md)
 - [Serwer raportów](/features/reports/index.md)
+- [Zadania](tasks.md)
+- [Zarządzanie dokumentacją](documentation_management.md)
+- [Zarządzanie dokumentacją organizacji](organization_doc_management.md)
 - [Mailing](mailing.md)
 - [SMS](sms.md)
 

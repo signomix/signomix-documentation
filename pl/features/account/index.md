@@ -10,9 +10,11 @@ Formularz zmiany ustawień pozwala na zmianę parametrów:
 - preferowany język aplikacji,
 - konfigurację kanałów powiadomień.
 
+Patrz także: [Typy kont](account_types.md).
+
 ## Kanały powiadomień
 
-Powiadomienia wysyłane przez Signomix dzielą się na 3 typy, których nazwy sugerują ich przeznaczenie:
+Powiadomienia wysyłane przez Signomix dzielą się na 3 typy, których nazwy sugerują ich przeznaczenie:
 - informacyjne - zwykłe informacje dotyczące działania urządzeń użytkownika lub platformy
 - ostrzegawcze - ostrzeżenia
 - alarmy o wystąpieniu problemów o charakterze krytycznym
@@ -31,7 +33,7 @@ Reguły:
 - Domyślnym prefiksem telefonu (jeśli nie został podany) jest "+48".
 - Przy wysyłaniu SMS numer telefonu zostaje zawsze poprzedzony prefiksem.
 - Wysłanie SMS zmniejsza pulę punktów dla usług dodatkowych użytkownika o 2 punkty.
-- Konto płatne ma do dyspozycji pulę 20 punktów na miesiąc, czyli może wysłać w miesiącu 10 wiadomości SMS bez dodatkowych opłat.
+- Konto płatne ma do dyspozycji pulę 20 punktów na miesiąc.
 - Zwiększenie puli punktów wymaga odrębnego zakupu.
 
 ### Konfiguracja kanału Webhook
@@ -39,11 +41,22 @@ Reguły:
 Składnia dla adresu Webhook: `[[HeaderName:]HeaderValue@]ServiceURI`
 
 Znaczenie:
+
 |element|meaning|
 |---|---|
 |HeaderName|Nazwa nagłówka dodawanego do zapytania HTTP. Domyślna wartość to `Authorization`|
 |HeaderValue|Wartość zadeklarowanego nagłówka|
 |ServiceURI|Adres serwisu, do którego będzie wysłane powiadomienie|
+
+Powiadomienia są wysyłane metodą POST. Przykład symulacji wysyłanego żądania przy użyciu programu cURL:
+
+```shell
+curl  -X POST \
+  'https://mywebhookservice.com' \
+  --header 'Authorization: token' \
+  --header 'Content-Type: text/plain' \
+  --data-raw 'notification text'
+```
 
 > **UWAGA!** Nie należy dodawać nagłówka `Content-Type`. Zostanie od dodany automatycznie na podstawie zawartości powiadomienia.
 

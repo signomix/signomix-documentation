@@ -1,5 +1,7 @@
 # Zadania
 
+<span class="badge bg-primary">Funkcjonalność dostępna dla organizacji</span>
+
 Zadania wywoływane cyklicznie obejmują:
 - uruchamianie raportów,
 - inicjowanie zdarzeń wywołujących określone działania.
