@@ -10,26 +10,26 @@ W Signomiksie występują trzy rodzaje kont administracyjnych:
 ## Zarządzanie systemem
 Podstawowe funkcjonalności dostępne dla administratorów systemu.
 - [Zarządzanie użytkownikami](users.md)
-- [Urządzenia](devices.md)
-- [Reguły monitorowania danych](rules.md)
-- [Zasady kierowania powiadomień](/administration/notifcation_config.md)
-- [Serwer raportów](/features/reports/index.md)
 - [Zadania](tasks.md)
 - [Zarządzanie dokumentacją](documentation_management.md)
 - [Zarządzanie dokumentacją organizacji](organization_doc_management.md)
 - [Mailing](mailing.md)
 - [SMS](sms.md)
+- [LNS](lns.md)
+- [Serwis tłumaczący](translation_service.md)
+- Zarządzanie aplikacjami
 
 ## Zarządzanie organizacją
 
 Administrator systemu przydziela wybranym użytkownikom organizacji uprawniwnia administratora organizacji.
 
 Wersja dla organizacji (przedsiębiorstwa, stowarzyszenia, fundacji itp.) oferuje dodatkowe funkcjonalności:
-- [Struktura organizacyjna](organization_structure.md)
+- struktura organizacyjna
 - zarządzanie kontami użytkowników w ramach organizacji
 - udostępnianie funkcjonalności Signomiksa klientom organizacji
 - zarządzanie kontami klientów
 - definiowanie struktury uprawnień
+- zasady kierowania powiadomień
 
 ## Zarządzanie klientem
 
@@ -37,6 +37,10 @@ Administrator organizacji przydziela wybranym użytkownikom klienta organizacji 
 
 ## Uruchamianie Signomiksa we własnej infrastrukturze
 
-Ta część zostanie opisana wkrótce.
+Ta część wymaga uzupełnienia.
 
+- [Konfiguracja platformy](platform_configuration.md)
 - [Sekrety](secrets.md)
+
+Patrz także:
+- [Budowa i uruchamianie Signomiksa lokalnie](../development/getting-started.md)

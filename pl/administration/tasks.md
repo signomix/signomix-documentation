@@ -13,10 +13,10 @@ Zadania systemowe tworzone automatycznie w trakcie instalowania Signomiksa:
 - pobranie informacji z serwisu SMS
 - pobranie informacji z serwisu tłumaczącego
 
-## Zadania użytkownika
+## Zadania dla organizacji
 
-**Uwaga: poniższe funkcjonalności nie są jeszcze dostępne**
+Administrator systemu może definiować zadania opracowane dla organizacji. Zadania te mogą obejmować:
+- uruchamianie raportów
+- inicjowanie zdarzeń wywołujących określone działania
 
-Użytkownicy mający uprawnienia do definiowania własnych zadań mogą definiować zadania typu:
-- uruchomienie wybranego raportu
-- pobranie danych z zewnętrznego źródła
+Administrator organizacji może zapoznać się z definicją zadania, jednak potrzebę jego zmiany musi uzgodnić z administratorem platformy.
