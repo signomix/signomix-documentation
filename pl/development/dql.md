@@ -7,18 +7,43 @@ Wyrażenie DQL składa się z warunków oraz ich parametrów.
 Ogólnie wyrażenie DQL ma 2 możliwe formy:
 1. Pobranie danych odbieranych od urządzenia
 ```
-[USING] [{specyfikacja raportu}] [GET] {definicja zakresu danych} [[WHERE] {definicja wyboru}] [[AS] {definicja formatu}] 
+[USING] {specyfikacja raportu} [WHERE] {definicja wyboru} [GET] {definicja zakresu danych} [{definicja operacji}] [[AS] {definicja formatu}]
 ```
 2. Pobranie danych zapisywanych przez urządzenie wirtualne. Stosowane w specyficznych przypadkach, zostanie omówione w odrębnym dokumencie.
 ```
 [GET] virtual
 ```
+
 Przy czym:
-- słowa kluczowe `GET`, `WHERE`, `AS` mają jedynie znaczenie informacyjne i mogą być pominięte,
+- słowa kluczowe `USING`, `GET`, `WHERE`, `AS` mają jedynie znaczenie informacyjne i mogą być pominięte,
 - wielkość liter nie ma znaczenia.
 
+## Specyfikacja raportu
+
+- `report className` - gdzie `className` to nazwa klasy Java implementującej logikę raportu (patrz: [Server Raportów](/features/reports/index.md))
+- `class className` - to samo co `report className`
+
+## Definicja wyboru
+
+- `project nazwa` - pobranie danych otagowanych nazwą projektu równą `nazwa`
+- `status n` - pobranie danych dla których urządzenie miało status o wartości równej `n`
+- `eui identyfikator` - pobranie danych dotyczących urządzenia o identyfikatorze `identyfikator`
+- `group identyfikator` - pobranie danych dotyczących urządzeń należących do grupy o identyfikatorze `identyfikator`
+- `channel definicja` - pobranie pomiarów o nazwach zawartych w polu `definicja` - nazwy oddzielone przecinkami lub znak `*` oznaczający wszystkie nazwy pomiarów dla danego źródła
+- `notnull` - odrzuć rekordy (pomiary z tym samym znacznikiem czasu), które nie mają kompletu wartości (patrz: `channel definicja`)
+- `deltas` - pobierz przyrosty wartości pomiarów
+
+Przykłady:
+```
+project test
+status 1
+project test status 1
+eui 010203040506 channel *
+eui 010203040506 channel temperature,humidity
+```
+
 ## Definicja zakresu danych
-- `last n` - pobranie n ostatnich wartości określonej danej
+- `limit n` - pobranie n ostatnich wartości określonej danej
 - `average n [new v]` - pobranie średniej wartości wyliczonej z `n` ostatnich pomiarów, opcjonalnie uwzględniając dodatkową wartość `v`
 - `minimum n [new v]` - pobranie minimalnej wartości z `n` ostatnich pomiarów, opcjonalnie uwzględniając dodatkową wartość `v`
 - `maximum n [new v]` - pobranie maksymalnej wartości z `n` ostatnich pomiarów, opcjonalnie uwzględniając dodatkową wartość `v`
@@ -26,6 +51,20 @@ Przy czym:
 - `sback n` - uwzględnienie danych zarejestrowanych maksymalnie `n` sekund wcześniej
 - `ascending` - sortuj wynik zgodnie z rosnącą datą pomiaru
 - `descending` - sortuj wynik zgodnie z malejącą datą pomiaru
+- `deltas` - pobierz przyrosty wartości pomiarów
+- `interval n intervalName` - pobierz dane dla `n` ostatnich przedziałów czasowych o nazwie `intervalName`
+- `zone strefaCzasowa` - uwzględnij strefę czasową `strefaCzasowa` przy określaniu punktów czasowych (np. `Europe/Warsaw`, `UTC`). Domyślnie używana jest strefa czasowa `UTC`.
+- `gapfill` - wypełnij luki w danych pomiarowych, które nie mają wartości dla danego przedziału czasowego. W przypadku braku wartości pomiaru, zostanie zwrócona wartość zarejestrowana w poprzednim przedziale czasowym. 
+- 
+Nazwy przedziałów czasowych `intervalName` są zdefiniowane w konfiguracji serwera Signomix. Domyślnie dostępne są:
+- `second` - przedział czasowy o długości 1 sekundy
+- `minute` - przedział czasowy o długości 1 minuty
+- `hour` - przedział czasowy o długości 1 godziny
+- `day` - przedział czasowy o długości 1 dnia
+- `week` - przedział czasowy o długości 1 tygodnia
+- `month` - przedział czasowy o długości 1 miesiąca
+- `quarter` - przedział czasowy o długości 3 miesięcy
+- `year` - przedział czasowy o długości 1 roku
 
 Parametr `sback` jest uwzględniany przy pobieraniu ostatnich pomiarów grupy. Jeśli nie jest podany, to uwzględniane są dane zarejestrowane maksymalnie godzinę wcześniej. Parametr ten umożliwia odrzucenie danych ze źródeł, które nie przesłały danych w ostatnim czasie (np. przestały działać, ale istnieją dane historyczne, które nie powinny być prezentowane w raporcie).
 
@@ -52,98 +91,25 @@ from -0M-UTC
 from -0d-Europe/Warsaw to -0m
 ```
 
-## Specyfikacja raportu
+## Definicja operacji
 
-- `report className` - gdzie `className` to nazwa klasy Java implementującej logikę raportu (patrz: [Server Raportów](/features/reports/index.md))
+Wybrane raporty mogą wspierać dodatkowe operacje, które są wykonywane na danych przed ich zwróceniem. Operacje te są definiowane w specyfikacji raportu i mogą być różne dla różnych raportów. W przypadku raportu `IntervalReport` dostępna jest operacja pomnożenia wartości pomiarów przez wartość pobraną z innego źródła.
 
-## Definicja wyboru
+- `mpy` - nazwa mnożnika - pomiaru, przez który mają być pomnożone wartości pomiarów zwróconych przez raport
+- `mpyeui` - identyfikator urządzenia, z którego ma być pobrana wartość mnożnika
 
-- `project nazwa` - pobranie danych otagowanych nazwą projektu równą `nazwa`
-- `status n` - pobranie danych dla których urządzenie miało status o wartości równej `n`
-- `eui identyfikator` - pobranie danych dotyczących urządzenia o identyfikatorze `identyfikator`
-- `group identyfikator` - pobranie danych dotyczących urządzeń należących do grupy o identyfikatorze `identyfikator`
-- `channel definicja` - pobranie pomiarów o nazwach zawartych w polu `definicja` - nazwy oddzielone przecinkami lub znak `*` oznaczający wszystkie nazwy pomiarów dla danego źródła
-- `notnull` - odrzuć rekordy (pomiary z tym samym znacznikiem czasu), które nie mają kompletu wartości (patrz: `channel definicja`)
-
-
-Przykłady:
+Przykład: pobranie przyrostów wartości (co 30 dni) pomiaru `counter` z urządzenia `WATERMETTER` i pomnożenia  ich przez wartość pomiaru `water` (cena 1m3 wody) zapisanego w źródle danych `PRICES`:
 ```
-last 10 project test
-last 10 status 1
-last 10 project test status 1
-last 3 eui 010203040506 channel *
-last 3 eui 010203040506 channel temperature,humidity
+report IntervalReport eui WATERMETTER channel counter interval 30 day mpy water mpyEui PRICES
 ```
 
-## Format danych zwracanych przez raporty
 
-Wszystkie raportu zwracają dane jako obiekt JSON.
+## Definicja formatu
 
-## Definicja formatu (przestarzałe)
-> Uwaga: Definicja formatu ma zastosowanie jedynie w przypadku pobierania danych urządzenia za pomocą API `/api/iot/device/{eui}?{query}`. Nie jest uwzględniana przez kontrolki pulpitu.
+Domyślnym formatem danych jest JSON. Dla wybranych raportów możliwe jest również pobranie danych w formacie CSV lub HTML. W takim przypadku można wybrać format danych poprzez dodanie słowa kluczowego `format` i nazwy formatu do wyrażenia DQL.
 
-- `timeseries` - zastosowanie uproszczonego formatu JSON
-- `csv.timeseries` - dane w formacie CSV
+- `format json` - dane w formacie JSON (domyślny)
+- `format csv` - dane w formacie CSV
+- `format html` - dane w formacie HTML
 
-Przykład danych zwracanych w wyniku zapytania bez definicji formatu:
-
-```
-last 2
-
-[
-  [
-    {
-      "deviceEUI":"020305",
-      "name":"temperature",
-      "value":30.0,
-      "timestamp":1679526300000,
-      "stringValue":null
-    },
-    {
-      "deviceEUI":"020305",
-      "name":"temperature",
-      "value":30.0,
-      "timestamp":1679526411476,
-      "stringValue":null
-    }
-  ]
-]
-```
-
-Przykład uproszczonego formatu JSON:
-
-```
-last 2 timeseries
-get last 2 as timeseries
-
-[
-  [
-    [
-      "timestamp",
-      "temperature",
-      "humidity"
-    ],
-    [
-      1679526411476,
-      30.0,
-      46.0
-    ],
-    [
-      1679526300000,
-      30.0,
-      46.0
-    ]
-  ]
-]
-```
-
-Przykład formatu CSV:
-
-```
-last 2 csv.timeseries
-
-timestamp,temperature,humidity
-1679526411476,30.0,46.0
-1679526300000,30.0,46.0
-```
 

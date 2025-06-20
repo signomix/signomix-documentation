@@ -13,7 +13,7 @@ Aplikacje mogą być definiowane dla:
 
 ## Definiowanie obsługi źródeł danych
 
-Konfigurując źródło danych można podać identyfikator aplikacji, która będzie dla niego zastosowana. W takim wypadku kody aplikacji będą użyty do dekodowania oraz przetwarzania odbieranych z tego źródła danyc.
+Konfigurując źródło danych można podać identyfikator aplikacji, która będzie dla niego zastosowana. W takim wypadku kody aplikacji będą użyty do dekodowania oraz przetwarzania odbieranych z tego źródła danych.
 
 Planując instalowanie wielu urządzeń tego samego typu można zdefiniować dla nich aplikację i w ten sposób:
 - uniknąć konieczności wielokrotnego definiowania skryptów dekodera i procesora danych,

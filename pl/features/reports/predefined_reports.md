@@ -21,3 +21,17 @@ last 10 report UserLoginReport
 
 Dostarcza danych pomiarowych na podstawie specyfikacji opisaną ze składnią DQL.
 
+## Raport interwałowy
+
+Dostarcza danych pomiarowych zebranych w przedziałach czasowych. W zależności od parametrów wywołania, raport może zwracać wartości pomiarów zarejestrowane na końcu każdego przedziału czasowego lub przyrosty wartości pomiarów w każdym przedziale czasowym.
+
+Przykład pobierający dane zarejestrowane na końcu każdego przedziału czasowego:
+
+```
+report IntervalReport eui 010203040506 channel temperature interval 1 hour limit 10 zone Europe/Warsaw
+```
+
+Przykład pobierający przyrosty wartości pomiarów w każdym przedziale czasowym:
+
+```
+report IntervalReport eui 010203040506 channel temperature interval 1 hour delta limit 10

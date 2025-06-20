@@ -4,6 +4,7 @@
 <div class="col">
 
 ## Podstawy
+
 - [Ogólny opis serwisu](introduction.md)
 - [Jak zacząć](getting_started.md)
 - [Konto użytkownika](features/account/index.md)
@@ -26,6 +27,7 @@
 <div class="col">
 
 ## Zaawansowane
+
 - [Biblioteka procesora danych](development/data_processor_lib.md)
 - [Data Query Language (DQL)](development/dql.md)
 - [Skrypty reguł]
@@ -37,6 +39,7 @@
 <div class="col">
 
 ## Administracja
+
 - [Zarządzanie](administration/index.md)
 - [Budowa i uruchamianie Signomiksa lokalnie](development/getting-started.md)
 - [Retencja danych](administration/data_retention.md)
@@ -55,14 +58,4 @@
  1. Dokumentacja Signomiksa jest dostępna w języku polskim. Wersja angielska dokumentacji jest generowana  automatycznie przy użyciu serwisu DeepL. Inne wersje językowe mogą pojawić się w późniejszym terminie. Obecnie serwisy tłumaczące teksty są łatwo dostępne (również jako funkcja przeglądarki) więc mam nadzieję, że brak wersji językowych nie stanowi dużego problemu.
  2. Źródła dokumentacji są dostępne w [repozytorium GitHub](https://github.com/signomix/signomix-documentation).
 
-<style>
-    h1 {
-        font-size: 2rem;
-    }
-    h2 {
-        font-size: 1.5rem
-    }
-    h3 {
-        font-size: 1.1rem
-    }
-</style>
+
