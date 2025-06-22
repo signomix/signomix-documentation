@@ -31,8 +31,8 @@
 - [Biblioteka procesora danych](development/data_processor_lib.md)
 - [Data Query Language (DQL)](development/dql.md)
 - [Skrypty reguł](development/rule_scripts.md)
-- [Integracja z siecią TTN]
-- [Integracja z ChirpStack'iem]
+- [Integracja z siecią TTN](development/ttn.md)
+- [Integracja z ChirpStack'iem](development/chirpstack.md)
 - [Prywatna sieć LoRaWAN](projects/private_lorawan.md)
 - [Narzędzia dla projektów](projects/index.md)
 </div>
