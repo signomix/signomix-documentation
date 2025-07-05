@@ -77,4 +77,9 @@ Niniejsza polityka prywatności opisuje, jakie informacje gromadzone są w ramac
 
 ### 3. Ciasteczka
 
-Ciasteczka (cookie) są wykorzystywane przez Usługę jedynie w celu umożliwienia prawidłowego jej działania.
+Usługa wykorzystuje dwa rodzaje plików cookie:
+
+- techniczne - niezbędne do jej prawidłowego jej działania,
+- statystyczne - wykorzystywane w celu gromadzenia anonimowych danych statystycznych.
+
+Użytkownik może zaakceptować lub odrzucić wykorzystanie plików cookie w celach statystycznych.
