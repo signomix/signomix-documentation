@@ -37,6 +37,11 @@ Akceptując Regulamin Użytkownik zobowiązuje się:
 4. Użytkownik może zmienić rodzaj abonamentu lub anulować zamówienie w dowolnym momencie. W przypadku anulowania zamówienia, faktury za kolejne okresy rozliczeniowe nie będą wystawiane.
 5. Zmiana rodzaju Abonamentu na niższy wymaga zgłoszenie tego Usługodawcy i uzgodnienia z nim sposobu postępowania z danymi przechowywanymi aktualnie w ramach Usługi.
 
+### 5. Wymagania dla użytkowników darmowych kont
+
+1. Użytkownicy korzystający z darmowego rodzaju Abonamentu zobowiązani są logować się do Usługi przynajmniej raz na 3 miesiące. W przypadku braku logowania w tym okresie, Usługodawca zastrzega sobie prawo do usunięcia konta Użytkownika oraz wszystkich danych z nim powiązanych.
+2. Użytkownicy korzystający z darmowego rodzaju Abonamentu powinni zarejestrować przynajmniej jedno Źródło Danych w Usłudze w ciągu pierwszych 30 dni od momentu rejestracji konta. W przypadku braku zarejestrowanego Źródła Danych w tym okresie, Usługodawca zastrzega sobie prawo do usunięcia konta Użytkownika oraz wszystkich danych z nim powiązanych.
+
 ## & 3. Polityka Prywatności
 
 Niniejsza polityka prywatności opisuje, jakie informacje gromadzone są w ramach Usługi, w jaki sposób Usługodawca wykorzystuje te informacje oraz jakie oferuje możliwości dostępu, aktualizacji i kontroli tych danych.
